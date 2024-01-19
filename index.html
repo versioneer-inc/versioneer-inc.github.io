@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Versioneer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <script src="./components/header.js" type="module"></script>
+    <script src="./components/navbar.js" type="module"></script>
+    <script src="./components/footer.js" type="module"></script>
+    <script src="./components/menu.js" type="module"></script>
+    <script src="./components/cover.js" type="module"></script>
+    <script src="./components/main-section.js" type="module"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background: #001923;
+      }
+    </style>
+  </head>
+  <body>
+    <versioneer-menu enable-login></versioneer-menu>
+    <versioneer-header></versioneer-header>
+    <versioneer-navbar
+      brand-title="Versioneer's Data Cloud Fabric"
+    ></versioneer-navbar>
+    <div class="l-wrapper">
+      <versioneer-cover
+        overline="Establish your Data Cloud to facilitate"
+        title="New opportunities revealed through governed access to Earth Data"
+        background-image="./connected-earth.png"
+      ></versioneer-cover>
+      <main class="u-py-5">
+        <versioneer-main-section
+          text="Streamline data management by organizing local and external data into distinct repositories tailored for specific tasks, supported by dedicated APIs and UI tools to facilitate data discovery and exploration.
+          <br/><br/>
+          Utilize inherent transaction and data versioning capabilities to track all changes in data, enabling easy rollback to previous states if needed."
+        ></versioneer-main-section>
+        <versioneer-main-section
+          title="Facilitate Collaboration with Governance and Security"
+          text="Ensure secure sharing and distribution of data to encourage collaboration and best practices for data access. A sophisticated user management and permissions system, coupled with a comprehensive observability stack, facilitates seamless administration through dashboards and alerting functionalities."
+          ></versioneer-main-section>
+        <versioneer-main-section
+          text="Aligned with S3 protocol standards, the system effortlessly operates on any S3-compatible object storage, providing direct access to data for optimal performance. Native integration with common earth and data science ecosystems allows direct access from popular scientific and ML Python libraries such as Pandas, PyArrow, and PyTorch.
+          <br/></br>
+          Delivered via a private SaaS model with all runtime components deployed in the customer's cloud, the product effectively delegates all operational complexities, yet allows to maintain complete over the data, guaranteeing data security and compliance."
+        ></versioneer-main-section>
+      </main>
+      <versioneer-footer
+        title="Want to learn more?"
+        description="All you need is your data and your code. We are here to help!"
+      ></versioneer-footer>
+    </div>
+
+    <script>
+      const menuItems = [
+        {
+          href: "/",
+          title: "The Private SaaS Product",
+        },
+        {
+          href: "/pricing",
+          title: "Pricing Options",
+        },
+        {
+          href: "/documentation",
+          title: "Documentation Center",
+        },
+      ];
+      const footerItems = [
+        [
+          {
+            href: "/about",
+            title: "About Versioneer",
+          },
+          {
+            href: "/privacy-notice",
+            title: "Privacy Notice",
+          },
+        ],
+        [
+          {
+            href: "/tocs",
+            title: "Terms and Conditions",
+          },
+          {
+            href: "/cookies",
+            title: "Cookies Notice",
+          },
+        ]
+      ];
+      document.querySelector("versioneer-navbar").menuItems = menuItems;
+      document.querySelector("versioneer-menu").menuItems = menuItems;
+      document.querySelector("versioneer-footer").footerItems = footerItems;
+    </script>
+  </body>
+</html>
