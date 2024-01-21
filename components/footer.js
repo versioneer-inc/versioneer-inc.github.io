@@ -11,7 +11,7 @@ customElements.define(
     connectedCallback() {
       this.css = `
             #site-footer {
-                margin-top: 256px;
+                margin-top: 2px;
             }
         `;
       this.content = `
