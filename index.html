@@ -28,6 +28,8 @@
     <versioneer-header></versioneer-header>
     <versioneer-navbar
       brand-title="Data Mesh as a Service"
+      enable-login
+    ></esa-navbar>
     ></versioneer-navbar>
     <div class="l-wrapper">
       <versioneer-cover
@@ -80,26 +82,26 @@
         },
       ];
       const footerItems = [
-        /*[
-          {
+        [
+          /*{
             href: "/about",
             title: "About Versioneer",
-          },
+          },*/
           {
             href: "/privacy-notice",
             title: "Privacy Notice",
           },
         ],
         [
-          {
+          /*{
             href: "/tocs",
             title: "Terms and Conditions",
           },
           {
             href: "/cookies",
             title: "Cookies Notice",
-          },
-        ]*/
+          },*/
+        ]
       ];
       document.querySelector("versioneer-navbar").menuItems = menuItems;
       document.querySelector("versioneer-menu").menuItems = menuItems;
