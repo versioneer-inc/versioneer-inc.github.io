@@ -25,7 +25,7 @@ customElements.define(
                     <div class="c-brand">
                         <a href="/">
                             <h3 class="c-brand__title">
-                                ${this.getAttribute("brand-title")}					
+                                ${this.getAttribute("brand-title")}
                             </h3>
                         </a>
                     </div>

@@ -34,12 +34,12 @@ customElements.define(
                     <div class="l-row">
                         <div class="l-col-12 l-col-sm-6 l-col-md-4 l-col-lg-3">
                         <h3 class="u-mb-2">
-                            ${this.getAttribute("title")}					
+                            ${this.getAttribute("title")}
                         </h3>
                         <p class="u-f-sm">
                         ${this.getAttribute("description")}
                         </p>
-                        <a class="c-button c-button--primary u-mt-1" href="/contact-us">
+                        <a class="c-button c-button--primary u-mt-1" href="https://share-eu1.hsforms.com/18BpeE-CIQdOmuRZK_PZTYg2dqt8d">
                         Contact us					</a>
                         </div>
                         <!-- /.l-col -->

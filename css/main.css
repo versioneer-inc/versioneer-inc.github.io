@@ -5155,7 +5155,7 @@ img {
   }
 }
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
   text-rendering: optimizeLegibility;
@@ -5172,7 +5172,7 @@ h6,
 .c-menu .c-nav-link {
   position: relative;
   color: #344E41;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   letter-spacing: -0.025em;
   margin: 0;
@@ -5490,7 +5490,7 @@ a {
   border-color: #344E41;
   border-radius: 0.2rem;
   color: #344E41;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
   letter-spacing: 0.16rem;
@@ -7306,18 +7306,9 @@ textarea {
   left: 0;
   right: 0;
   z-index: -1;
-} /*! versioneer.css v1.1 */
-@font-face {
-  font-family: "NotesVersioneerbold";
-  src: url("../fonts/notesversioneerbol.ttf") format("truetype");
-}
-@font-face {
-  font-family: "NotesVersioneerregular";
-  src: url("../fonts/notesversioneerreg.woff2") format("woff2"),
-    url("../fonts/notesversioneerreg.ttf") format("truetype");
 }
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
 h1,
@@ -7328,7 +7319,7 @@ h5,
 h6,
 .c-nav-link,
 .c-menu .c-nav-link {
-  font-family: "NotesVersioneerbold", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
 }
 strong,
@@ -7348,8 +7339,8 @@ b {
 .l-list--buttons .l-list__link,
 .wpcf7-submit,
 .c-pagination__link {
-  font-family: "NotesVersioneerbold", sans-serif;
-  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease;
