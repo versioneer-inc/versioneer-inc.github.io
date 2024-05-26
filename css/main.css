@@ -5155,7 +5155,7 @@ img {
   }
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Adobe Clean", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
   text-rendering: optimizeLegibility;
@@ -5172,7 +5172,7 @@ h6,
 .c-menu .c-nav-link {
   position: relative;
   color: #344E41;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Adobe Clean", sans-serif;
   font-weight: normal;
   letter-spacing: -0.025em;
   margin: 0;
@@ -5486,7 +5486,7 @@ a {
   border-color: #344E41;
   border-radius: 0.2rem;
   color: #344E41;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Adobe Clean", sans-serif;
   font-size: 1.6rem;
   font-weight: normal;
   letter-spacing: 0.16rem;
@@ -7303,7 +7303,7 @@ textarea {
   z-index: -1;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Adobe Clean", sans-serif;
   font-weight: 300;
 }
 h1,
@@ -7314,7 +7314,7 @@ h5,
 h6,
 .c-nav-link,
 .c-menu .c-nav-link {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Adobe Clean", sans-serif;
   font-weight: normal;
 }
 strong,
@@ -7334,7 +7334,7 @@ b {
 .l-list--buttons .l-list__link,
 .wpcf7-submit,
 .c-pagination__link {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Adobe Clean", sans-serif;
   font-weight: bold;
   transition-property: all;
   transition-duration: 0.25s;

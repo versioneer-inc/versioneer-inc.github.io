@@ -21,7 +21,7 @@ customElements.define(
             <style>${this.css}</style>
             <section id="versioneer-header" class="versioneer-header">
                 <div class="versioneer-header__left">
-                    <img class="versioneer-header__title" src="./versioneer_logo.png" alt="Versioneer">
+                    <img class="versioneer-header__title" src="./logo_versioneer_green.png" alt="Versioneer">
                 </div>
             </section>
         `;
