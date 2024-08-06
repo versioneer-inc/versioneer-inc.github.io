@@ -39,7 +39,7 @@ customElements.define(
                           <p class="u-f-sm">
                             ${this.getAttribute("description")}
                           </p>
-                          <a class="c-button c-button--primary u-mt-1" href="mailto:info@versionner.at">
+                          <a class="c-button c-button--primary u-mt-1" href="mailto:info@versioneer.at">
                             Contact us
                           </a>
                         </div>
