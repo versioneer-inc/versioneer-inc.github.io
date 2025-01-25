@@ -1,7 +1,7 @@
 ---
 date: 2024-12-30
 title: Minimize ROT Data on All Levels
-image: http://versioneer.at/pages/public/earth-data.png
+image: https://versioneer.at/working-with-earth-data.png
 ---
 # Tooling to Minimize ROT Data in Earth Sciences on All Levels
 

@@ -1,7 +1,7 @@
 ---
 date: 2024-12-27
 title: Application-Aware ROT Data Minimizing
-image: http://versioneer.at/pages/public/earth-data.png
+image: https://versioneer.at/working-with-earth-data.png
 ---
 # The Case for Application-Aware Deduplication and Duplication Avoidance in Earth Sciences
 
