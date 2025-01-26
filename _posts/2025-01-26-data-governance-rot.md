@@ -29,9 +29,9 @@ Effective data governance requires granular access control to ensure that only a
 
 With granular access controls, the organization can define who can read, modify, or delete specific datasets, using it inside and even sharing it publicly or outside of the organization.
 
-## Data Security: Ensuring Data Quality and Compliance
+## Data Lineage: Ensuring Data Quality and Compliance
 
-Data security is a foundational component of metadata management, encompassing areas such as data quality, usage monitoring, data lineage, and data loss prevention (DLP).  While some aspects of data security, like storage management and access controls, can be delegated to underlying managed object storage solutions, other critical elements, such as data lineage, must be integrated directly into the application domain. This is because understanding the journey of data—from its origin to any changes made to it, who made those changes, and how the data is shared—ensures complete visibility into its movement and transformation. This level of transparency is vital not only for ensuring that data remains trustworthy but also for maintaining auditability and meeting regulatory compliance requirements.
+Data security is a foundational component of metadata management, encompassing areas such as data quality, usage monitoring, data lineage, and data loss prevention (DLP).  While some aspects like DLP can be delegated to the underlying storage layer, other critical elements, such as data lineage, must be integrated directly into the application domain. This is because understanding the journey of data—from its origin to any changes made to it, who made those changes, and how the data is shared—ensures complete visibility into its movement and transformation. This level of transparency is vital not only for ensuring that data remains trustworthy but also for maintaining auditability and meeting regulatory compliance requirements.
 
 In addition, enforcing checksum validations and automating their verification plays a key role in ensuring data integrity. This helps detect any unintended alterations and maintain confidence in the quality of the data.
 
