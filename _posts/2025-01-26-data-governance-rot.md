@@ -21,7 +21,7 @@ There are two key types of data catalogs: physical and application-specific. Phy
 
 As organizations accumulate vast amounts of data, metadata searchability becomes a key feature. Being able to search metadata (such as file types, data fields, or transformation history) enhances your ability to find specific data assets quickly, saving time and improving data discovery.
 
-A data scientist may need to find data assets related to "high cloud coverage" or derived assets transformed trough a specific "pipeline version". With search-based metadata management, they can query the catalog for datasets that match their search criteria, saving time spent looking for the right data.
+A data scientist may need to find data assets related to "high cloud coverage" or derived assets transformed through a specific "pipeline version". With search-based metadata management, they can query the catalog for datasets that match their search criteria, saving time spent looking for the right data.
 
 ## Granular Access Control: Securing Data Access
 
