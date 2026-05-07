@@ -1,92 +1,671 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Versioneer</title>
+    <title>Versioneer | Data Mesh Engineering</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <meta
+      name="description"
+      content="Versioneer helps teams turn existing storage, pipelines, and know-how into trusted data products."
+    />
     <script src="./components/header.js" type="module"></script>
     <script src="./components/navbar.js" type="module"></script>
     <script src="./components/footer.js" type="module"></script>
     <script src="./components/menu.js" type="module"></script>
-    <script src="./components/cover.js" type="module"></script>
-    <script src="./components/main-section.js" type="module"></script>
     <link rel="stylesheet" href="./css/main.css" />
     <style>
       html,
       body {
         margin: 0;
         padding: 0;
-        height: 100%;
+        min-height: 100%;
         width: 100%;
-        background: #001923;
+        background: #10201f;
       }
     </style>
   </head>
   <body>
-    <versioneer-menu enable-login></versioneer-menu>
+    <versioneer-menu></versioneer-menu>
     <versioneer-header></versioneer-header>
-    <versioneer-navbar
-      brand-title="Data Mesh as a Service"
-      enable-login
-    ></esa-navbar>
-    ></versioneer-navbar>
-    <div class="l-wrapper">
-      <versioneer-cover
-        overline="Decentralized Data, Central Control"
-        title="Stop Sharing Access —<br>— Start Sharing Products"
-        background-image="./connected-earth.png"
-      ></versioneer-cover>
-      <main class="u-py-5">
-        <versioneer-main-section
-          text="Organize data into repositories tailored for specific domains, supported by dedicated APIs and UI tools to facilitate data discovery and exploration.
-          <br/><br/>
-          Utilize the inherent transaction and data versioning capabilities to track all data changes, enabling rollback to previous versions if needed."
-        ></versioneer-main-section>
-        <versioneer-main-section
-          title="Direct governance by defining declarative rules and policies"
-          text="Securely consume, transform and publish data through collaboration among authorized users.
-          <br/><br/>
-           Understand and monitor data flows with rich dashboarding and alerting capabilities, offered through a comprehensive observability stack."
-        ></versioneer-main-section>
-        <versioneer-main-section
-          text="Onboard existing data pipelines through S3 compliant data access from common scientific & ML libraries like Pandas, PyArrow, and PyTorch.
-          <br/><br/>
-          Continuously integrate data without duplication, enabled through automated data quality checks."
-        ></versioneer-main-section>
-        <versioneer-main-section
-          title="Secure compliance by retaining data within your cloud."
-          text="Connect any S3-compatible object storage, establishing direct data access for optimal performance without compromising security.
-          <br/><br/>
-          Avoid operational complexities by relying on the Private SaaS delivery approach, with a solution running on your cloud infrastructure."
-        ></versioneer-main-section>
+    <versioneer-navbar brand-title="Data Mesh Engineering"></versioneer-navbar>
+
+    <div class="l-wrapper homepage">
+      <section class="homepage-hero" id="top">
+        <div class="l-container homepage-hero__content">
+          <div class="l-row">
+            <div class="l-col-12 l-col-md-8 l-col-lg-7">
+              <p class="t-overline">Versioneer</p>
+              <h1>Governed data mesh for distributed teams.</h1>
+              <p class="homepage-hero__lead">
+                Versioneer helps teams turn the storage, pipelines, and know-how
+                they already have into data products people can trust and reuse.
+                Teams keep working close to their data, in their own clouds.
+                Shared rules for access, metadata, and catalogs make the data
+                easier to find, protect, and use across the organization.
+                <br /><br />
+                Versioneer works as your data platform engineering partner:
+                open-source building blocks, expert support, and a private SaaS
+                control plane to create and operate decentralized data products.
+              </p>
+              <div class="homepage-actions">
+                <a
+                  class="c-button c-button--primary"
+                  href="mailto:info@versioneer.at"
+                >
+                  Talk to us
+                </a>
+                <a
+                  class="c-button c-button--secondary c-button--negative"
+                  href="#private-saas"
+                >
+                  See the operating model
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figure class="homepage-hero__background" aria-hidden="true">
+          <img src="./connected-earth.png" alt="" />
+        </figure>
+      </section>
+
+      <main>
+        <section class="home-section home-section--intro" id="data-mesh">
+          <div class="l-container">
+            <div class="l-row">
+              <div class="l-col-12 l-col-md-5">
+                <p class="t-overline">What Versioneer Stands For</p>
+                <h2>Govern data from first draft to publication.</h2>
+              </div>
+              <div class="l-col-12 l-col-md-6 l-offset-md-1">
+                <p class="home-section__lead">
+                  A data mesh does not mean copying every result into one
+                  place. It means teams can register, check, version, approve,
+                  and publish data products while keeping ownership.
+                </p>
+                <p>
+                  Versioneer gives that process a technical foundation: storage
+                  connections, snapshots, access rules, workflow definitions,
+                  and live status. Publication becomes a catalog, snapshot, and
+                  policy step instead of a large file move. Platform teams
+                  reduce manual stewardship work, ROT data (redundant,
+                  obsolete, trivial), and uncertainty around reproducibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section home-section--offer" id="offer">
+          <div class="l-container">
+            <div class="home-section__header">
+              <p class="t-overline">What You Get</p>
+              <h2>A partner model for platform teams.</h2>
+              <p>
+                Versioneer combines open components, implementation work, and an
+                operated control plane so your team can move from architecture
+                slides to a running data platform.
+              </p>
+            </div>
+            <div class="home-offer-grid">
+              <article class="home-offer">
+                <span class="home-card__eyebrow">Open source</span>
+                <h3>Building blocks you can inspect and evolve.</h3>
+                <p>
+                  DataLab, storage access, catalogs, credentials, policies,
+                  snapshots, and controllers can be adopted as composable
+                  infrastructure instead of a closed platform.
+                </p>
+              </article>
+              <article class="home-offer">
+                <span class="home-card__eyebrow">Expert services</span>
+                <h3>Hands-on data platform engineering.</h3>
+                <p>
+                  We help platform teams and data stewards design the lifecycle,
+                  connect existing storage, define metadata, and reduce manual
+                  publication and governance work.
+                </p>
+              </article>
+              <article class="home-offer">
+                <span class="home-card__eyebrow">Private SaaS</span>
+                <h3>A control plane we operate with you.</h3>
+                <p>
+                  Your data stays in your environment while Versioneer operates
+                  lifecycle automation, policy rollout, monitoring, updates, and
+                  support.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section home-section--beliefs" id="principles">
+          <div class="l-container">
+            <div class="home-section__header">
+              <p class="t-overline">What We Believe</p>
+              <h2>Put platform changes in code.</h2>
+              <p>
+                We have run cloud sandboxes for years. The lesson is simple and
+                more important now: people, scripts, and AI agents all touch the
+                same infrastructure. Important changes should be written down,
+                reviewed, applied automatically, and limited by policy.
+              </p>
+            </div>
+            <div class="home-belief-grid">
+              <article class="home-belief">
+                <span class="home-card__eyebrow">Declarative</span>
+                <h3>Describe what should exist.</h3>
+                <p>
+                  Workspaces, data products, access, lifecycle states,
+                  credentials, storage, and services should be defined in one
+                  clear form, not scattered across tickets and manual scripts.
+                </p>
+              </article>
+              <article class="home-belief">
+                <span class="home-card__eyebrow">Kubernetes-first</span>
+                <h3>Use Kubernetes as the common base.</h3>
+                <p>
+                  Kubernetes gives teams a shared way to run namespaces,
+                  policies, services, storage, sandboxes, agents, and the custom
+                  resources that describe them.
+                </p>
+              </article>
+              <article class="home-belief">
+                <span class="home-card__eyebrow">GitOps-first</span>
+                <h3>Use Git for platform changes.</h3>
+                <p>
+                  The wanted state should be versioned, reviewed, and easy to
+                  trace. Controllers can then keep applying it without relying
+                  on hand-run commands.
+                </p>
+              </article>
+              <article class="home-belief">
+                <span class="home-card__eyebrow">Policy-first</span>
+                <h3>Put rules in front of the work.</h3>
+                <p>
+                  Identity, permissions, quotas, security, approvals, and data
+                  lifecycle changes should be checked before work starts,
+                  especially when agents can act faster than humans can review.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section home-section--muted" id="what-it-takes">
+          <div class="l-container">
+            <div class="home-section__header">
+              <p class="t-overline">What It Takes</p>
+              <h2>A mesh needs a few basics.</h2>
+            </div>
+            <div class="home-card-grid">
+              <article class="home-card">
+                <span class="home-card__eyebrow">01</span>
+                <h3>Early registration</h3>
+                <p>
+                  Register datasets while they are still changing. Do not wait
+                  until publication, force a full transfer first, or manage the
+                  lifecycle in spreadsheets and tickets.
+                </p>
+              </article>
+              <article class="home-card">
+                <span class="home-card__eyebrow">02</span>
+                <h3>Clear lifecycle</h3>
+                <p>
+                  Keep working data separate from immutable published snapshots,
+                  with clear states such as staged, committed, and published.
+                </p>
+              </article>
+              <article class="home-card">
+                <span class="home-card__eyebrow">03</span>
+                <h3>Access across clouds</h3>
+                <p>
+                  Use S3-compatible buckets, credentials, mounts, and access
+                  rules across clouds and platforms.
+                </p>
+              </article>
+              <article class="home-card">
+                <span class="home-card__eyebrow">04</span>
+                <h3>Workflow as code</h3>
+                <p>
+                  Describe inspection, validation, snapshots, publication, and
+                  permissions as code so controllers can apply them and keep
+                  status visible.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section" id="building-blocks">
+          <div class="l-container">
+            <div class="l-row">
+              <div class="l-col-12 l-col-md-4">
+                <p class="t-overline">How We Facilitate</p>
+                <h2>Composable building blocks for federated data spaces.</h2>
+                <div class="home-involvement" aria-label="Versioneer involvement">
+                  <h3>Where we are involved</h3>
+                  <p>
+                    We are involved in real projects with partners, open-source
+                    communities, and data-space initiatives where these
+                    building blocks have to work in practice.
+                  </p>
+                  <div class="home-involvement__links">
+                    <a href="https://eox.at">
+                      <span>Company collaboration</span>
+                      <strong>EOX</strong>
+                    </a>
+                    <a href="https://earthcode.esa.int/">
+                      <span>Earth observation data space</span>
+                      <strong>ESA EarthCODE</strong>
+                    </a>
+                    <a href="https://eoepca.org/">
+                      <span>Open platform ecosystem</span>
+                      <strong>EOEPCA</strong>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="l-col-12 l-col-md-7 l-offset-md-1">
+                <div class="home-feature-list">
+                  <div class="home-feature">
+                    <h3>Cloud sandboxes and storage you can evolve</h3>
+                    <p>
+                      Versioneer provides DataLab cloud sandboxes,
+                      S3-compatible storage access, credentials, registries,
+                      databases, caches, vector stores, monitoring, and policy
+                      checks. These building blocks lead into data orchestration
+                      services for lifecycle tracking, immutable snapshots,
+                      publication workflows, and live status.
+                    </p>
+                  </div>
+                  <div class="home-feature">
+                    <h3>Expert support for data engineering</h3>
+                    <p>
+                      We work with teams and data stewards on data product
+                      design, early registration, quality checks, metadata,
+                      lineage, access, data version handling, and practical
+                      data management patterns so stewardship becomes less
+                      manual and the mesh becomes part of daily work.
+                    </p>
+                  </div>
+                  <div class="home-feature">
+                    <h3>Works with what you already have</h3>
+                    <p>
+                      Existing object storage, shared filesystems, scientific
+                      tools, machine learning libraries, and cloud
+                      infrastructure can be connected without forcing teams into
+                      one new system or repeated full-dataset copies. The goal
+                      is less ROT data and more reuse of what is already there.
+                    </p>
+                  </div>
+                </div>
+                <a class="home-text-link" href="https://github.com/versioneer-tech/">
+                  Explore Versioneer open source
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section home-section--datalab" id="datalab">
+          <div class="l-container">
+            <div class="home-split">
+              <div class="home-yaml" aria-label="DataLab YAML example">
+                <div class="home-yaml__bar">
+                  <span>datalab.yaml</span>
+                  <span>DataLab example</span>
+                </div>
+                <pre class="home-yaml__code"><code><span class="token-muted">apiVersion:</span> pkg.internal/v1beta2
+<span class="token-muted">kind:</span> Datalab
+<span class="token-muted">metadata:</span>
+  <span class="token-muted">name:</span> s-research-team
+<span class="token-muted">spec:</span>
+  users: [jane, jim, john]
+  sessions: [{name: default, state: started}, {name: analysis, state: stopped}]
+  vcluster: true
+  persistence:
+    storageClassName: sbs-default-retain
+<span class="token-key">  data:</span>
+<span class="token-highlight">    readOnlyMount: true</span>
+  quota:
+    memory: 64Gi
+    storage: 2Ti
+    budget: x-large
+  registry: # OCI container registry
+    enabled: true
+    storage: 500Gi
+  security:
+    policy: privileged
+    kubernetesRole: admin
+    kubernetesAccess: false
+  databases: # PostgreSQL
+    pg0:
+      names: [analytics, dev, prod]
+      storage: 250Gi
+      backupStorage: 750Gi
+  documentStores: # MongoDB
+    prod:
+      storage: 500Gi
+  cacheStores: # Redis
+    prod:
+      storage: 128Gi
+  vectorStores: # Qdrant
+    prod:
+      storage: 500Gi</code></pre>
+                <a
+                  class="home-yaml__source"
+                  href="https://github.com/versioneer-tech/provider-datalab/tree/main/examples/base"
+                >
+                  Source: DataLab examples on GitHub
+                </a>
+              </div>
+              <div class="home-split__content">
+                <p class="t-overline">DataLab Foundation</p>
+                <h2>One manifest for governed workspaces.</h2>
+                <p>
+                  The DataLab creates shared cloud workspaces on Kubernetes. A
+                  single <code>Datalab</code> claim says who can enter, which
+                  sessions exist, whether the lab needs its own cluster space,
+                  which storage credentials are mounted, and which services are
+                  available.
+                </p>
+                <p>
+                  This is the welcome experience we want for data engineering:
+                  humans and agents arrive in the same governed sandbox, with
+                  tools, storage access, quotas, security settings, and
+                  databases already in place.
+                </p>
+                <div class="home-audience-grid" aria-label="DataLab users">
+                  <article class="home-audience">
+                    <span class="home-audience__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M5 21a7 7 0 0 1 14 0" />
+                      </svg>
+                    </span>
+                    <div>
+                      <h3>For humans</h3>
+                      <p>
+                        Researchers, engineers, and stewards get a ready lab
+                        with storage, services, permissions, and enough room to
+                        work.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="home-audience">
+                    <span class="home-audience__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <rect x="6" y="7" width="12" height="10" rx="2" />
+                        <path d="M12 7V4" />
+                        <path d="M8 11h.01" />
+                        <path d="M16 11h.01" />
+                        <path d="M10 15h4" />
+                        <path d="M4 13h2" />
+                        <path d="M18 13h2" />
+                      </svg>
+                    </span>
+                    <div>
+                      <h3>For agents</h3>
+                      <p>
+                        Agents can use the same governed sandbox with scoped
+                        credentials, quotas, services, and policy boundaries.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <ul class="home-check-list">
+                  <li>
+                    Define personal or shared labs with users, admins, and session
+                    state.
+                  </li>
+                  <li>
+                    Attach storage, durable workspaces, credentials, and
+                    read-only data mounts.
+                  </li>
+                  <li>
+                    Add services such as relational databases, document stores,
+                    caches, vector stores, and registries.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section home-section--muted" id="private-saas">
+          <div class="l-container">
+            <div class="home-section__header">
+              <p class="t-overline">Our Product</p>
+              <h2>A control layer for data that stays where it is.</h2>
+              <p>
+                Versioneer can run this layer as private SaaS. The data stays
+                in the customer environment. Versioneer runs the control plane
+                for lifecycle, policy, trust, monitoring, and updates.
+              </p>
+            </div>
+            <div class="home-lifecycle" aria-label="Managed data product lifecycle">
+              <span>Register</span>
+              <span>Inspect</span>
+              <span>Stage</span>
+              <span>Commit snapshot</span>
+              <span>Publish</span>
+            </div>
+            <div class="home-plane-grid">
+              <article class="home-plane home-plane--customer">
+                <span class="home-plane__label">Customer data plane</span>
+                <h3>Your clouds, platforms, and workspaces.</h3>
+                <p>
+                  Storage, compute, identity, network boundaries, sensitive
+                  data, pipelines, and DataLab workspaces stay close to the
+                  teams and platforms that use them.
+                </p>
+              </article>
+              <article class="home-plane home-plane--versioneer">
+                <span class="home-plane__label">Versioneer control plane</span>
+                <h3>Run lifecycle, policy, and publication.</h3>
+                <p>
+                  Versioneer coordinates snapshots, monitoring, policy changes,
+                  updates, and support without becoming the place where all data
+                  must be copied.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section home-section--map" id="architecture">
+          <div class="l-container">
+            <div class="home-section__header">
+              <p class="t-overline">Capability Map</p>
+              <h2>The parts that make the system work.</h2>
+              <p>
+                These are the pieces needed to run governed data products across
+                clouds, teams, and workspaces.
+              </p>
+            </div>
+            <div class="home-capability-map" aria-label="Versioneer system map">
+              <article class="home-capability home-capability--model">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Contract</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M7 3h7l4 4v14H7z" />
+                      <path d="M14 3v5h5" />
+                      <path d="M10 12h5" />
+                      <path d="M10 16h7" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Data Product Model</h3>
+                <p>States, metadata, versions, policies, and publication rules.</p>
+              </article>
+              <article class="home-capability home-capability--apis">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Interface</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m8 9-3 3 3 3" />
+                      <path d="m16 9 3 3-3 3" />
+                      <path d="m13 6-2 12" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>APIs & CRDs</h3>
+                <p>Actions for validation, promotion, publication, archive, and access.</p>
+              </article>
+              <article class="home-capability home-capability--federation">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Storage</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M4 7c0-1.7 2.7-3 6-3s6 1.3 6 3-2.7 3-6 3-6-1.3-6-3z" />
+                      <path d="M4 7v6c0 1.7 2.7 3 6 3s6-1.3 6-3V7" />
+                      <path d="M16 11h2.5a2.5 2.5 0 0 1 0 5H18" />
+                      <path d="M18 16h2" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Federated Storage</h3>
+                <p>Several buckets and storage systems with shared identity and rules.</p>
+              </article>
+              <article class="home-capability home-capability--core">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Control</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3v4" />
+                      <path d="M12 17v4" />
+                      <path d="M3 12h4" />
+                      <path d="M17 12h4" />
+                      <circle cx="12" cy="12" r="5" />
+                      <circle cx="12" cy="12" r="1.5" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Reconciliation</h3>
+                <p>
+                  Controllers compare declared state with the live system, then
+                  run validation, indexing, copying, lifecycle changes, policy
+                  updates, and status checks.
+                </p>
+              </article>
+              <article class="home-capability home-capability--publication">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Publish</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 19V5" />
+                      <path d="m6 11 6-6 6 6" />
+                      <path d="M5 19h14" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Publication</h3>
+                <p>Metadata, catalog updates, webhooks, and long-term storage steps.</p>
+              </article>
+              <article class="home-capability home-capability--governance">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Policy</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 3 5 6v6c0 4.2 2.8 7.5 7 9 4.2-1.5 7-4.8 7-9V6z" />
+                      <path d="M9.5 12.5 11 14l3.5-4" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Governance & Access</h3>
+                <p>Public, embargoed, and licensed access, established through common OIDC and STS concepts with secrets handled safely.</p>
+              </article>
+              <article class="home-capability home-capability--audit">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">History</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M3 12a9 9 0 1 0 3-6.7" />
+                      <path d="M3 4v5h5" />
+                      <path d="M12 7v5l3 2" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Audit Log</h3>
+                <p>Git history, lifecycle events, current status, and user/API views.</p>
+              </article>
+              <article class="home-capability home-capability--evolving">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Change</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="6" cy="6" r="2" />
+                      <circle cx="18" cy="18" r="2" />
+                      <circle cx="6" cy="18" r="2" />
+                      <path d="M6 8v8" />
+                      <path d="M8 6h4a6 6 0 0 1 6 6v4" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Changing Datasets</h3>
+                <p>Version graphs, delta copy, reused unchanged content, and clear change reports.</p>
+              </article>
+              <article class="home-capability home-capability--packaging">
+                <div class="home-capability__top">
+                  <span class="home-card__eyebrow">Delivery</span>
+                  <span class="home-capability__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="m12 3 8 4-8 4-8-4z" />
+                      <path d="M4 7v10l8 4 8-4V7" />
+                      <path d="M12 11v10" />
+                    </svg>
+                  </span>
+                </div>
+                <h3>Service Packaging</h3>
+                <p>Reusable Helm or Kustomize packages, docs, reference deployments, and demos.</p>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
+
       <versioneer-footer
-        title="Want to learn more?"
-        description="We have collaborations with established companies like <a href=https://eox.at>EOX</a> and are part of the <a href=https://www.sciencepark.at/p/versioneer/>Science Park Graz High Tech Incubator</a> ESA BIC program.<br/><br/>
-        All you need is code, data and access to cloud infrastructure. We are here to help!"
+        title="Ready to run trusted data products?"
+        description="We work with organizations that need trusted data products, cloud infrastructure, and hands-on data engineering support.<br/><br/>Former ESA BIC incubatee via Science Park Graz.<br/><br/>All you need is code, data, and access to cloud infrastructure. We are here to help."
       ></versioneer-footer>
     </div>
+
     <script>
       const menuItems = [
         {
-          href: "/",
-          title: "Product",
+          href: "#building-blocks",
+          title: "How We Facilitate",
         },
         {
-          href: "https://research.versioneer.at",
-          title: "Research",
+          href: "#datalab",
+          title: "DataLab Foundation",
         },
         {
-          href: "https://github.com/versioneer-tech/",
-          title: "Open Source",
+          href: "#private-saas",
+          title: "Our Product",
         },
         {
-          href: "https://medium.com/@stefan.achtsnit_41940",
-          title: "Blog",
+          href: "#architecture",
+          title: "Capability Map",
         },
       ];
       const footerItems = [
+        [
+          {
+            href: "https://research.versioneer.at",
+            title: "Research",
+          },
+          {
+            href: "https://github.com/versioneer-tech/",
+            title: "Open Source",
+          },
+          {
+            href: "https://medium.com/@stefan.achtsnit_41940",
+            title: "Blog",
+          },
+        ],
         [
           {
             href: "about-terms-1.0.pdf",
@@ -96,8 +675,6 @@
             href: "privacy-notice-1.0.pdf",
             title: "Privacy Notice",
           },
-        ],
-        [
           {
             href: "terms-conditions-1.0.pdf",
             title: "Terms & Conditions",
@@ -106,7 +683,7 @@
             href: "disclaimer-1.0.pdf",
             title: "Disclaimer",
           },
-        ]
+        ],
       ];
       document.querySelector("versioneer-navbar").menuItems = menuItems;
       document.querySelector("versioneer-menu").menuItems = menuItems;
