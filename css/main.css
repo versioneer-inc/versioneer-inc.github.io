@@ -8456,6 +8456,27 @@ p,
   padding-bottom: 2.4rem;
 }
 
+.c-header .c-brand a {
+  align-items: center;
+  display: flex;
+}
+
+.c-header .c-brand__logo {
+  display: none;
+  height: 3.8rem;
+  object-fit: contain;
+  object-position: left center;
+  width: auto;
+}
+
+#site-header.is-sticky .c-brand__title {
+  display: none;
+}
+
+#site-header.is-sticky .c-brand__logo {
+  display: block;
+}
+
 .c-header .c-brand__title,
 .c-header .l-list__item.current-menu-item .c-nav-link {
   color: #f5f1e7 !important;
