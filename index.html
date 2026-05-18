@@ -8,6 +8,7 @@
       name="description"
       content="Versioneer implements domain-specific data platforms with open building blocks, expert engineering, and a control plane operated in the customer's cloud."
     />
+    <script src="./components/site-config.js"></script>
     <script src="./components/header.js" type="module"></script>
     <script src="./components/navbar.js" type="module"></script>
     <script src="./components/footer.js" type="module"></script>
@@ -656,68 +657,11 @@
         </section>
       </main>
 
-      <versioneer-footer
-        title="Ready to build your domain data platform?"
-        description="We work with organizations that need domain-specific data platforms, trusted data products, cloud infrastructure, and hands-on engineering support.<br/><br/>We take operational burden from your data stewards and domain facilitators so they can stay close to end users while the control plane runs in your cloud.<br/><br/>Former <a href=&quot;https://www.sciencepark.at/de/p/versioneer/&quot;>ESA BIC incubatee</a> via Science Park Graz."
-      ></versioneer-footer>
+      <versioneer-footer></versioneer-footer>
     </div>
 
     <script>
-      const menuItems = [
-        {
-          href: "#building-blocks",
-          title: "How We Facilitate",
-        },
-        {
-          href: "#datalab",
-          title: "DataLab Foundation",
-        },
-        {
-          href: "#private-saas",
-          title: "Our Offering",
-        },
-        {
-          href: "#architecture",
-          title: "Capability Map",
-        },
-      ];
-      const footerItems = [
-        [
-          {
-            href: "https://research.versioneer.at",
-            title: "Research",
-          },
-          {
-            href: "https://github.com/versioneer-tech/",
-            title: "Open Source",
-          },
-          {
-            href: "blog.html",
-            title: "Blog",
-          },
-        ],
-        [
-          {
-            href: "about-terms-1.0.pdf",
-            title: "About & Terms",
-          },
-          {
-            href: "privacy-notice-1.0.pdf",
-            title: "Privacy Notice",
-          },
-          {
-            href: "terms-conditions-1.0.pdf",
-            title: "Terms & Conditions",
-          },
-          {
-            href: "disclaimer-1.0.pdf",
-            title: "Disclaimer",
-          },
-        ],
-      ];
-      document.querySelector("versioneer-navbar").menuItems = menuItems;
-      document.querySelector("versioneer-menu").menuItems = menuItems;
-      document.querySelector("versioneer-footer").footerItems = footerItems;
+      window.applyVersioneerSiteConfig();
     </script>
   </body>
 </html>

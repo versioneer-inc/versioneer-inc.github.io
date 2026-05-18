@@ -28,6 +28,7 @@
       content="Versioneer blog posts on data mesh engineering, Earth Observation data supply chains, and governed platform infrastructure."
     />
     <meta name="twitter:image" content="https://versioneer.at/logo_versioneer_green.png" />
+    <script src="./components/site-config.js"></script>
     <script src="./components/header.js" type="module"></script>
     <script src="./components/navbar.js" type="module"></script>
     <script src="./components/footer.js" type="module"></script>
@@ -87,68 +88,11 @@
         </section>
       </main>
 
-      <versioneer-footer
-        title="Ready to run trusted data products?"
-        description="We work with organizations that need trusted data products, cloud infrastructure, and hands-on data engineering support.<br/><br/>Former ESA BIC incubatee via Science Park Graz.<br/><br/>All you need is code, data, and access to cloud infrastructure. We are here to help."
-      ></versioneer-footer>
+      <versioneer-footer></versioneer-footer>
     </div>
 
     <script>
-      const menuItems = [
-        {
-          href: "index.html#building-blocks",
-          title: "How We Facilitate",
-        },
-        {
-          href: "index.html#datalab",
-          title: "DataLab Foundation",
-        },
-        {
-          href: "index.html#private-saas",
-          title: "Our Offering",
-        },
-        {
-          href: "index.html#architecture",
-          title: "Capability Map",
-        },
-      ];
-      const footerItems = [
-        [
-          {
-            href: "https://research.versioneer.at",
-            title: "Research",
-          },
-          {
-            href: "https://github.com/versioneer-tech/",
-            title: "Open Source",
-          },
-          {
-            href: "blog.html",
-            title: "Blog",
-          },
-        ],
-        [
-          {
-            href: "about-terms-1.0.pdf",
-            title: "About & Terms",
-          },
-          {
-            href: "privacy-notice-1.0.pdf",
-            title: "Privacy Notice",
-          },
-          {
-            href: "terms-conditions-1.0.pdf",
-            title: "Terms & Conditions",
-          },
-          {
-            href: "disclaimer-1.0.pdf",
-            title: "Disclaimer",
-          },
-        ],
-      ];
-      document.querySelector("versioneer-navbar").menuItems = menuItems;
-      document.querySelector("versioneer-menu").menuItems = menuItems;
-      document.querySelector("versioneer-footer").footerItems = footerItems;
+      window.applyVersioneerSiteConfig({ menuBase: "index.html" });
     </script>
     <script src="./blog-viewer.js"></script>
   </body>

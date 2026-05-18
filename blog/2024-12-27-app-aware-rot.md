@@ -44,5 +44,3 @@ For larger datasets, having an efficient and performant metadata layer becomes c
 3. Application-level strategies ensure efficient handling of redundancy based on data structure and behavior.
 
 In data science, teams often clone large datasets for analysis. In environments like JupyterHub, where users share datasets, libraries, and notebooks, duplication is minimized by sharing data without unnecessary replication. Data teams typically have access to a shared file system, which may act as a cache. Cloning would allow referencing files in this shared cache only once, while CoW ensures only modified data portions are stored, avoiding duplication.
-
-*Originally published at*[*https://versioneer.at*](https://versioneer.at/2024/12/27/app-aware-rot)*on December 27, 2024.*

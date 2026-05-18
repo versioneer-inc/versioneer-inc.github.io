@@ -49,5 +49,3 @@ Here are the core benefits these tools provide to reduce ROT data across both se
 - They integrate seamlessly with a variety of remote storage solutions, including cloud object storage or enterprise systems, which may offer additional features like **deduplication** or **compression** on more granular block or chunk level as well.
 
 Automated cleanup policies are a critical component of maintaining an efficient workflow. By using tools like **DVC's** pipeline functionality or **Git hooks**, users can automatically prune outdated or obsolete files from their local cache or remote storage. Regular cleanup ensures that only the most relevant data is retained, while ROT data is consistently removed. The importance of implementing such data governance practices will be further explored in part 3 of this series.
-
-*Originally published at*[*https://versioneer.at*](https://versioneer.at/2024/12/30/rot-all-levels)*on December 30, 2024.*
