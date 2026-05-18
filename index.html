@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Versioneer | Data Mesh Engineering</title>
+    <title>Versioneer | Domain Data Platform Engineering</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Versioneer helps teams turn existing storage, pipelines, and know-how into trusted data products."
+      content="Versioneer implements domain-specific data platforms with open building blocks, expert engineering, and a control plane operated in the customer's cloud."
     />
     <script src="./components/header.js" type="module"></script>
     <script src="./components/navbar.js" type="module"></script>
@@ -27,7 +27,7 @@
   <body>
     <versioneer-menu></versioneer-menu>
     <versioneer-header></versioneer-header>
-    <versioneer-navbar brand-title="Data Mesh Engineering"></versioneer-navbar>
+    <versioneer-navbar brand-title="Data Platform Engineering"></versioneer-navbar>
 
     <div class="l-wrapper homepage">
       <section class="homepage-hero" id="top">
@@ -35,17 +35,20 @@
           <div class="l-row">
             <div class="l-col-12 l-col-md-8 l-col-lg-7">
               <p class="t-overline">Versioneer</p>
-              <h1>Governed data mesh for distributed teams.</h1>
+              <h1>Data platforms built for your domain, in your cloud.</h1>
               <p class="homepage-hero__lead">
-                Versioneer helps teams turn the storage, pipelines, and know-how
-                they already have into data products people can trust and reuse.
-                Teams keep working close to their data, in their own clouds.
-                Shared rules for access, metadata, and catalogs make the data
-                easier to find, protect, and use across the organization.
+                Versioneer helps organizations turn domain expertise, existing
+                storage, and pipelines into governed data products people can
+                trust and reuse. We implement the platform model around how your
+                users really work, from Earth Observation profiles for EO data
+                products to lifecycle automation for other data-intensive
+                domains.
                 <br /><br />
-                Versioneer works as your data platform engineering partner:
-                open-source building blocks, expert support, and a private SaaS
-                control plane to create and operate decentralized data products.
+                Data platforms should be operated by facilitators close to the
+                end users: data stewards, domain leads, and platform teams who
+                understand the work. Versioneer supports them with open-source
+                building blocks, hands-on engineering, and a control plane
+                operated in the customer's cloud.
               </p>
               <div class="homepage-actions">
                 <a
@@ -74,22 +77,26 @@
           <div class="l-container">
             <div class="l-row">
               <div class="l-col-12 l-col-md-5">
-                <p class="t-overline">What Versioneer Stands For</p>
-                <h2>Govern data from first draft to publication.</h2>
+                <p class="t-overline">Domain Platform Engineering</p>
+                <h2>Turn domain knowledge into platform capabilities.</h2>
               </div>
               <div class="l-col-12 l-col-md-6 l-offset-md-1">
                 <p class="home-section__lead">
-                  A data mesh does not mean copying every result into one
-                  place. It means teams can register, check, version, approve,
-                  and publish data products while keeping ownership.
+                  A useful data platform is not a generic place where every file
+                  is copied. It is a set of domain-aware workflows that let teams
+                  register, check, version, approve, and publish data products
+                  while keeping ownership close to the people who understand
+                  them.
                 </p>
                 <p>
-                  Versioneer gives that process a technical foundation: storage
-                  connections, snapshots, access rules, workflow definitions,
-                  and live status. Publication becomes a catalog, snapshot, and
-                  policy step instead of a large file move. Platform teams
-                  reduce manual stewardship work, ROT data (redundant,
-                  obsolete, trivial), and uncertainty around reproducibility.
+                  Versioneer gives those workflows a technical foundation:
+                  storage connections, snapshots, access rules, lifecycle
+                  states, metadata profiles, workflow definitions, and live
+                  status. In Earth Observation this becomes an EO profile
+                  with STAC, product states, publication gates, and long-term
+                  archival handover. For other domains, the same pattern captures
+                  their own product rules. Publication becomes a governed
+                  transition, not a late file move.
                 </p>
               </div>
             </div>
@@ -100,11 +107,12 @@
           <div class="l-container">
             <div class="home-section__header">
               <p class="t-overline">What You Get</p>
-              <h2>A partner model for platform teams.</h2>
+              <h2>Expert implementation with an operated control plane.</h2>
               <p>
-                Versioneer combines open components, implementation work, and an
-                operated control plane so your team can move from architecture
-                slides to a running data platform.
+                We do not sell a distant black-box platform. Versioneer combines
+                open components, implementation work, and an operated control
+                plane so your platform team can run a domain data platform inside
+                its own cloud.
               </p>
             </div>
             <div class="home-offer-grid">
@@ -121,18 +129,19 @@
                 <span class="home-card__eyebrow">Expert services</span>
                 <h3>Hands-on data platform engineering.</h3>
                 <p>
-                  We help platform teams and data stewards design the lifecycle,
-                  connect existing storage, define metadata, and reduce manual
-                  publication and governance work.
+                  We help platform teams and data stewards define the domain
+                  profile: product model, lifecycle states, metadata, validation,
+                  access, publication gates, and the interfaces that make those
+                  rules usable by humans, pipelines, and agents.
                 </p>
               </article>
               <article class="home-offer">
                 <span class="home-card__eyebrow">Private SaaS</span>
                 <h3>A control plane we operate with you.</h3>
                 <p>
-                  Your data stays in your environment while Versioneer operates
-                  lifecycle automation, policy rollout, monitoring, updates, and
-                  support.
+                  Your data plane stays in your environment. Versioneer operates
+                  the control plane with your team, handling lifecycle
+                  automation, policy rollout, monitoring, updates, and support.
                 </p>
               </article>
             </div>
@@ -147,7 +156,8 @@
               <p>
                 We have run cloud sandboxes for years. The lesson is simple and
                 more important now: people, scripts, and AI agents all touch the
-                same infrastructure. Important changes should be written down,
+                same infrastructure. Domain rules should not live only in
+                meetings and memory. Important changes should be written down,
                 reviewed, applied automatically, and limited by policy.
               </p>
             </div>
@@ -196,7 +206,7 @@
           <div class="l-container">
             <div class="home-section__header">
               <p class="t-overline">What It Takes</p>
-              <h2>A mesh needs a few basics.</h2>
+              <h2>A domain platform needs a few basics.</h2>
             </div>
             <div class="home-card-grid">
               <article class="home-card">
@@ -218,10 +228,11 @@
               </article>
               <article class="home-card">
                 <span class="home-card__eyebrow">03</span>
-                <h3>Access across clouds</h3>
+                <h3>Domain profile</h3>
                 <p>
-                  Use S3-compatible buckets, credentials, mounts, and access
-                  rules across clouds and platforms.
+                  Encode product structure, metadata, validation, lifecycle
+                  states, access policy, and publication checks once. EO can
+                  have an EO profile; other domains get their own profile.
                 </p>
               </article>
               <article class="home-card">
@@ -230,7 +241,7 @@
                 <p>
                   Describe inspection, validation, snapshots, publication, and
                   permissions as code so controllers can apply them and keep
-                  status visible.
+                  status visible to facilitators and platform teams.
                 </p>
               </article>
             </div>
@@ -242,13 +253,14 @@
             <div class="l-row">
               <div class="l-col-12 l-col-md-4">
                 <p class="t-overline">How We Facilitate</p>
-                <h2>Composable building blocks for federated data spaces.</h2>
+                <h2>Composable building blocks, shaped into your domain profile.</h2>
                 <div class="home-involvement" aria-label="Versioneer involvement">
                   <h3>Where we are involved</h3>
                   <p>
-                    We are involved in real projects with partners, open-source
-                    communities, and data-space initiatives where these
-                    building blocks have to work in practice.
+                    Our Earth Observation work with EOX, EarthCODE, and EOEPCA
+                    is one concrete profile. The same platform pattern applies
+                    wherever domain teams need governed products, shared
+                    infrastructure, and reproducible publication.
                   </p>
                   <div class="home-involvement__links">
                     <a href="https://eox.at">
@@ -269,24 +281,22 @@
               <div class="l-col-12 l-col-md-7 l-offset-md-1">
                 <div class="home-feature-list">
                   <div class="home-feature">
-                    <h3>Cloud sandboxes and storage you can evolve</h3>
+                    <h3>Domain profiles, not generic workflows</h3>
                     <p>
-                      Versioneer provides DataLab cloud sandboxes,
-                      S3-compatible storage access, credentials, registries,
-                      databases, caches, vector stores, monitoring, and policy
-                      checks. These building blocks lead into data orchestration
-                      services for lifecycle tracking, immutable snapshots,
-                      publication workflows, and live status.
+                      We translate domain rules into reusable contracts: product
+                      models, metadata expectations, validation hooks, lifecycle
+                      states, access policies, and publication gates. The EO
+                      profile for Earth Observation is the example we are
+                      proving in practice.
                     </p>
                   </div>
                   <div class="home-feature">
-                    <h3>Expert support for data engineering</h3>
+                    <h3>Run by facilitators close to users</h3>
                     <p>
-                      We work with teams and data stewards on data product
-                      design, early registration, quality checks, metadata,
-                      lineage, access, data version handling, and practical
-                      data management patterns so stewardship becomes less
-                      manual and the mesh becomes part of daily work.
+                      Data stewards, platform teams, and domain leads should own
+                      the operating context. We support them with implementation,
+                      automation, and hands-on engineering so stewardship becomes
+                      visible, repeatable, and less manual.
                     </p>
                   </div>
                   <div class="home-feature">
@@ -295,8 +305,9 @@
                       Existing object storage, shared filesystems, scientific
                       tools, machine learning libraries, and cloud
                       infrastructure can be connected without forcing teams into
-                      one new system or repeated full-dataset copies. The goal
-                      is less ROT data and more reuse of what is already there.
+                      one new system or repeated full-dataset copies. The
+                      control plane coordinates lifecycle and policy without
+                      forcing a central copy of all data.
                     </p>
                   </div>
                 </div>
@@ -362,19 +373,28 @@
               </div>
               <div class="home-split__content">
                 <p class="t-overline">DataLab Foundation</p>
-                <h2>One manifest for governed workspaces.</h2>
+                <h2>One manifest for governed domain workspaces.</h2>
                 <p>
-                  The DataLab creates shared cloud workspaces on Kubernetes. A
-                  single <code>Datalab</code> claim says who can enter, which
-                  sessions exist, whether the lab needs its own cluster space,
-                  which storage credentials are mounted, and which services are
+                  The DataLab creates shared cloud workspaces on Kubernetes for
+                  the people and agents working closest to the data. A single
+                  <code>Datalab</code> claim says who can enter, which sessions
+                  exist, whether the lab needs its own cluster space, which
+                  storage credentials are mounted, and which services are
                   available.
+                </p>
+                <p>
+                  The important part is the Kubernetes resource model behind the
+                  manifest. The claim is a durable platform contract with
+                  metadata, desired state, observed state, labels, RBAC,
+                  admission checks, audit, reconciliation, and status. Teams get
+                  self-service inside a bounded workspace; the platform keeps
+                  governance around it.
                 </p>
                 <p>
                   This is the welcome experience we want for data engineering:
                   humans and agents arrive in the same governed sandbox, with
-                  tools, storage access, quotas, security settings, and
-                  databases already in place.
+                  domain data, tools, storage access, quotas, security settings,
+                  and databases already in place.
                 </p>
                 <div class="home-audience-grid" aria-label="DataLab users">
                   <article class="home-audience">
@@ -420,12 +440,12 @@
                     state.
                   </li>
                   <li>
-                    Attach storage, durable workspaces, credentials, and
-                    read-only data mounts.
+                    Attach storage, durable workspaces, credentials, read-only
+                    data mounts, and policy-controlled services.
                   </li>
                   <li>
-                    Add services such as relational databases, document stores,
-                    caches, vector stores, and registries.
+                    Expose status that humans can read, controllers can react
+                    to, GitOps can wait on, and agents can reason over.
                   </li>
                 </ul>
               </div>
@@ -436,12 +456,15 @@
         <section class="home-section home-section--muted" id="private-saas">
           <div class="l-container">
             <div class="home-section__header">
-              <p class="t-overline">Our Product</p>
-              <h2>A control layer for data that stays where it is.</h2>
+              <p class="t-overline">Our Offering</p>
+              <h2>We can operate a control plane in your cloud.</h2>
               <p>
-                Versioneer can run this layer as private SaaS. The data stays
-                in the customer environment. Versioneer runs the control plane
-                for lifecycle, policy, trust, monitoring, and updates.
+                Versioneer can run the control plane where your organization
+                needs it: inside your cloud and governance boundary. The data
+                plane remains your storage, compute, identity, network, and
+                workspaces. Domain facilitators stay close to end users while
+                Versioneer handles lifecycle automation, policy rollout,
+                monitoring, updates, and support.
               </p>
             </div>
             <div class="home-lifecycle" aria-label="Managed data product lifecycle">
@@ -454,20 +477,20 @@
             <div class="home-plane-grid">
               <article class="home-plane home-plane--customer">
                 <span class="home-plane__label">Customer data plane</span>
-                <h3>Your clouds, platforms, and workspaces.</h3>
+                <h3>Your clouds, data, and domain workspaces.</h3>
                 <p>
                   Storage, compute, identity, network boundaries, sensitive
                   data, pipelines, and DataLab workspaces stay close to the
-                  teams and platforms that use them.
+                  teams, stewards, and platforms that use them.
                 </p>
               </article>
               <article class="home-plane home-plane--versioneer">
                 <span class="home-plane__label">Versioneer control plane</span>
-                <h3>Run lifecycle, policy, and publication.</h3>
+                <h3>Operate lifecycle, policy, and publication.</h3>
                 <p>
-                  Versioneer coordinates snapshots, monitoring, policy changes,
-                  updates, and support without becoming the place where all data
-                  must be copied.
+                  Versioneer coordinates snapshots, validation, monitoring,
+                  policy changes, updates, and support without becoming the
+                  place where all data must be copied.
                 </p>
               </article>
             </div>
@@ -478,10 +501,11 @@
           <div class="l-container">
             <div class="home-section__header">
               <p class="t-overline">Capability Map</p>
-              <h2>The parts that make the system work.</h2>
+              <h2>The contracts behind a domain data platform.</h2>
               <p>
                 These are the pieces needed to run governed data products across
-                clouds, teams, and workspaces.
+                clouds, teams, workspaces, and domain-specific publication
+                workflows.
               </p>
             </div>
             <div class="home-capability-map" aria-label="Versioneer system map">
@@ -498,7 +522,10 @@
                   </span>
                 </div>
                 <h3>Data Product Model</h3>
-                <p>States, metadata, versions, policies, and publication rules.</p>
+                <p>
+                  States, metadata, versions, policies, publication rules, and
+                  domain profiles.
+                </p>
               </article>
               <article class="home-capability home-capability--apis">
                 <div class="home-capability__top">
@@ -527,7 +554,10 @@
                   </span>
                 </div>
                 <h3>Federated Storage</h3>
-                <p>Several buckets and storage systems with shared identity and rules.</p>
+                <p>
+                  Several buckets and storage systems with shared identity and
+                  rules, without forcing one central copy.
+                </p>
               </article>
               <article class="home-capability home-capability--core">
                 <div class="home-capability__top">
@@ -627,8 +657,8 @@
       </main>
 
       <versioneer-footer
-        title="Ready to run trusted data products?"
-        description="We work with organizations that need trusted data products, cloud infrastructure, and hands-on data engineering support.<br/><br/>Former ESA BIC incubatee via Science Park Graz.<br/><br/>All you need is code, data, and access to cloud infrastructure. We are here to help."
+        title="Ready to build your domain data platform?"
+        description="We work with organizations that need domain-specific data platforms, trusted data products, cloud infrastructure, and hands-on engineering support.<br/><br/>We take operational burden from your data stewards and domain facilitators so they can stay close to end users while the control plane runs in your cloud.<br/><br/>Former <a href=&quot;https://www.sciencepark.at/de/p/versioneer/&quot;>ESA BIC incubatee</a> via Science Park Graz."
       ></versioneer-footer>
     </div>
 
@@ -644,7 +674,7 @@
         },
         {
           href: "#private-saas",
-          title: "Our Product",
+          title: "Our Offering",
         },
         {
           href: "#architecture",

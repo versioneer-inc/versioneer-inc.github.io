@@ -1,5 +1,11 @@
 const POSTS = [
   {
+    key: "2026-05-19-from-object-uploads-to-product-transactions-in-eo-data",
+    date: "2026-05-19",
+    file: "blog/2026-05-19-from-object-uploads-to-product-transactions-in-eo-data.md",
+    fallbackTitle: "From Object Uploads to Product Transactions in EO Data",
+  },
+  {
     key: "2026-05-17-from-lego-bricks-to-composable-governance-why-agentic-data-platforms-need-a-resource-model-8871e7b1f036",
     date: "2026-05-17",
     file: "blog/2026-05-17-from-lego-bricks-to-composable-governance-why-agentic-data-platforms-need-a-resource-model-8871e7b1f036.md",
