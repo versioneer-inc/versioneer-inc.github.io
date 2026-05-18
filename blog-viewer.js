@@ -434,7 +434,7 @@ async function loadPost() {
 
     postContent.innerHTML = renderMarkdown(cleanedBody);
 
-    const pageTitle = `${title} | Versioneer Blog`;
+    const pageTitle = `${title} | Versioneer`;
     const pageDescription =
       meta.description ||
       "Versioneer blog posts on governed data products and platform engineering.";
