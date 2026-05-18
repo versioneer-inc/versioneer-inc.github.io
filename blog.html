@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog | Versioneer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Versioneer blog posts on data mesh engineering, Earth Observation data supply chains, and governed platform infrastructure."
+    />
+    <meta name="author" content="Versioneer" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://versioneer.at/blog.html" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog | Versioneer" />
+    <meta
+      property="og:description"
+      content="Versioneer blog posts on data mesh engineering, Earth Observation data supply chains, and governed platform infrastructure."
+    />
+    <meta property="og:url" content="https://versioneer.at/blog.html" />
+    <meta property="og:site_name" content="Versioneer" />
+    <meta property="og:image" content="https://versioneer.at/logo_versioneer_green.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog | Versioneer" />
+    <meta
+      name="twitter:description"
+      content="Versioneer blog posts on data mesh engineering, Earth Observation data supply chains, and governed platform infrastructure."
+    />
+    <meta name="twitter:image" content="https://versioneer.at/logo_versioneer_green.png" />
+    <script src="./components/header.js" type="module"></script>
+    <script src="./components/navbar.js" type="module"></script>
+    <script src="./components/footer.js" type="module"></script>
+    <script src="./components/menu.js" type="module"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        width: 100%;
+        background: #10201f;
+      }
+    </style>
+  </head>
+  <body>
+    <versioneer-menu></versioneer-menu>
+    <versioneer-header></versioneer-header>
+    <versioneer-navbar brand-title="Blog"></versioneer-navbar>
+
+    <div class="l-wrapper homepage blogpage">
+      <main>
+        <section class="blog-hero" id="top">
+          <div class="l-container">
+            <p class="t-overline">Versioneer Blog</p>
+            <h1>Notes on governed data products and platform engineering.</h1>
+            <p class="blog-hero__lead">
+              Writing from Versioneer on data supply chains, Earth Observation,
+              composable infrastructure, and the practical operating model behind
+              a governed data mesh.
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-shell" aria-label="Blog post viewer">
+          <div class="l-container">
+            <div class="blog-layout">
+              <aside class="blog-index" aria-label="Blog posts">
+                <p class="t-overline">Posts</p>
+                <nav id="post-list" class="blog-post-list"></nav>
+              </aside>
+
+              <article class="blog-post">
+                <p class="t-overline">Blog</p>
+                <h2 id="post-title">Loading...</h2>
+                <p class="blog-post__meta" id="post-meta">Loading...</p>
+                <p class="blog-post__origin" id="post-origin" hidden></p>
+                <div class="blog-post__divider" aria-hidden="true"></div>
+                <div id="post-content" class="blog-content"></div>
+                <p id="post-error" class="blog-error" hidden>
+                  The blog post could not be loaded.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <versioneer-footer
+        title="Ready to run trusted data products?"
+        description="We work with organizations that need trusted data products, cloud infrastructure, and hands-on data engineering support.<br/><br/>Former ESA BIC incubatee via Science Park Graz.<br/><br/>All you need is code, data, and access to cloud infrastructure. We are here to help."
+      ></versioneer-footer>
+    </div>
+
+    <script>
+      const menuItems = [
+        {
+          href: "index.html#building-blocks",
+          title: "How We Facilitate",
+        },
+        {
+          href: "index.html#datalab",
+          title: "DataLab Foundation",
+        },
+        {
+          href: "index.html#private-saas",
+          title: "Our Product",
+        },
+        {
+          href: "index.html#architecture",
+          title: "Capability Map",
+        },
+      ];
+      const footerItems = [
+        [
+          {
+            href: "https://research.versioneer.at",
+            title: "Research",
+          },
+          {
+            href: "https://github.com/versioneer-tech/",
+            title: "Open Source",
+          },
+          {
+            href: "blog.html",
+            title: "Blog",
+          },
+        ],
+        [
+          {
+            href: "about-terms-1.0.pdf",
+            title: "About & Terms",
+          },
+          {
+            href: "privacy-notice-1.0.pdf",
+            title: "Privacy Notice",
+          },
+          {
+            href: "terms-conditions-1.0.pdf",
+            title: "Terms & Conditions",
+          },
+          {
+            href: "disclaimer-1.0.pdf",
+            title: "Disclaimer",
+          },
+        ],
+      ];
+      document.querySelector("versioneer-navbar").menuItems = menuItems;
+      document.querySelector("versioneer-menu").menuItems = menuItems;
+      document.querySelector("versioneer-footer").footerItems = footerItems;
+    </script>
+    <script src="./blog-viewer.js"></script>
+  </body>
+</html>
