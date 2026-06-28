@@ -8,6 +8,7 @@ origin_title: Medium
 ---
 
 # The Reproducibility Challenge with Cloud Workspaces
+
 The rise of cloud computing has changed the way we develop software, conduct scientific research, and analyze data. As more organizations turn to cloud-based solutions, many platforms designed for specific tasks and workflows have emerged. This has led to the creation of different types of cloud workspaces that enhance collaboration, scalability, and efficiency.
 
 ## Categories of Cloud Workspaces
@@ -28,9 +29,9 @@ In scientific and analytical platforms, following the FAIR principles (Findable,
 
 Having a clear structure is essential to prevent chaos. Without good organization, projects can become messy, making it hard to find important files, keep things consistent, and reproduce past results. Disorganization can lead to several problems, such as:
 
-*   Overload: Storing notebooks, datasets, scripts, and outputs in the same folder can confuse file purposes, resulting in mistakes.
-*   Cross-Project Contamination: Sharing files and datasets across projects without proper organization can lead to conflicts, data corruption, and unintended data leakage.
-*   Environment Drift: As libraries and dependencies change, projects may become unusable unless the exact original environment is recreated.
+- Overload: Storing notebooks, datasets, scripts, and outputs in the same folder can confuse file purposes, resulting in mistakes.
+- Cross-Project Contamination: Sharing files and datasets across projects without proper organization can lead to conflicts, data corruption, and unintended data leakage.
+- Environment Drift: As libraries and dependencies change, projects may become unusable unless the exact original environment is recreated.
 
 Project Scaffolding is a method that automatically creates a standardized project structure, ensuring consistent organization across projects. Scaffolding tools like Cookiecutter or specific solutions like MLflow for Data Science projects help create directories for code, data, outputs, and logs, improving scalability and maintainability. This organization not only clarifies the project but also enables tools to make smart decisions and automate tasks. For example, having a dedicated data folder allows integration with different mount configurations (e.g. NFS vs s3fs). Placing environment descriptors, such as requirements.txt or environment.yml, at the root of the folder simplifies automatic environment setup. Including a Dockerfile allows tools to convert content into Docker containers, enhancing both local and remote project management. Other tools, like MLflow's tracking and reproducibility features, also depend on a specific project layout.
 
@@ -86,8 +87,8 @@ While making large datasets accessible through dedicated protocols (such as S3) 
 
 Annexing involves adding supplementary data or information to an existing dataset or system. This includes:
 
-*   Indexing the Data: Storing only pointer references to large dataset items within the project, which link to a separate designated storage space.
-*   Adding Metadata: Enhancing datasets or individual items with extra metadata that provides more context, such as provenance information. This makes them searchable and helps enforce data consistency (e.g., by using hashes).
+- Indexing the Data: Storing only pointer references to large dataset items within the project, which link to a separate designated storage space.
+- Adding Metadata: Enhancing datasets or individual items with extra metadata that provides more context, such as provenance information. This makes them searchable and helps enforce data consistency (e.g., by using hashes).
 
 This method allows indices to be treated like other project data, as they are smaller in size and can be checked into Git for version control. This maintains a history of changes and ensures data integrity. Additionally, it fosters collaboration by sharing reference pointers to the data rather than the data itself, providing an extra layer of abstraction for including versioning and provenance information.
 

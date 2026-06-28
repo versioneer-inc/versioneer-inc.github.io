@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # A Governance Strategy to Minimize ROT Data
+
 ![](blog/images/2025-01-26-data-governance-rot-1.png)
 
 **Note**: This blog post is part 3 of a 3-part series on practices to minimize ROT data in data-intensive domains like Earth Sciences.
@@ -48,15 +49,15 @@ The concept of Git-like operations in data management is transforming how organi
 In data science and machine learning, reproducibility ensures that experiments can be repeated with the same inputs and methods, yielding consistent results each time. This is crucial not only for maintaining data integrity but also for validating models and ensuring compliance with regulatory requirements
 
 - **Branching: Isolating Work without Duplication**
- Just as in software development, Git-like branching in data management enables teams to isolate their work in separate branches without duplicating the actual data. This operation conserves storage and allows for parallel work on different datasets without interference or conflict.
+  Just as in software development, Git-like branching in data management enables teams to isolate their work in separate branches without duplicating the actual data. This operation conserves storage and allows for parallel work on different datasets without interference or conflict.
 - **Committing Changes: Creating Immutable Snapshots**
- Each commit in Git captures an immutable snapshot of the code at a specific moment. Similarly, committing changes in data management captures a snapshot of the data at a particular point in time. This ensures a clear audit trail, which is essential for data reproducibility and traceability.
+  Each commit in Git captures an immutable snapshot of the code at a specific moment. Similarly, committing changes in data management captures a snapshot of the data at a particular point in time. This ensures a clear audit trail, which is essential for data reproducibility and traceability.
 - **Merging Branches: Integrating Changes Safely**
- Merging branches ensures that changes made in isolated branches can be smoothly integrated back into the main dataset. This maintains data consistency and ensures that the data pipeline continues to operate without disruption.
+  Merging branches ensures that changes made in isolated branches can be smoothly integrated back into the main dataset. This maintains data consistency and ensures that the data pipeline continues to operate without disruption.
 - **Reverting Changes: Safeguarding Data Integrity**
- Reverting changes allows data teams to undo mistakes and restore datasets to a prior, known good state. This feature helps maintain data integrity, reducing the risk of errors and ensuring the continuity of analysis and decision-making.
+  Reverting changes allows data teams to undo mistakes and restore datasets to a prior, known good state. This feature helps maintain data integrity, reducing the risk of errors and ensuring the continuity of analysis and decision-making.
 - **Tagging Commits: Labeling Key Data Milestones**
- Just as developers use tags in Git to mark significant code releases, data teams can use tags to mark key data milestones, such as the completion of a critical transformation or the final version of data before it enters an analytical phase.
+  Just as developers use tags in Git to mark significant code releases, data teams can use tags to mark key data milestones, such as the completion of a critical transformation or the final version of data before it enters an analytical phase.
 
 ## Conclusion
 

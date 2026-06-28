@@ -26,5 +26,5 @@ customElements.define(
             </section>
         `;
     }
-  }
+  },
 );

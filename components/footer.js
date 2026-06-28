@@ -60,7 +60,7 @@ customElements.define(
                                                             ${li.title}
                                                         </a>
                                                     </li>
-                                                `
+                                                `,
                                                   )
                                                   .join("")}
                                             </ul>
@@ -84,5 +84,5 @@ customElements.define(
                 </section>
         `;
     }
-  }
+  },
 );

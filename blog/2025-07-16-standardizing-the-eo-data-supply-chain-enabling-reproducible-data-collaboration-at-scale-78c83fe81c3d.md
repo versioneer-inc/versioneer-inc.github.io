@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # Standardizing the EO Data Supply Chain: Enabling Reproducible Data Collaboration at Scale
+
 ![](blog/images/2025-07-16-standardizing-the-eo-data-supply-chain-enabling-reproducible-data-collaboration-at-scale-78c83fe81c3d-1.jpeg)
 
 As reliance on Earth Observation (EO) data intensifies-spanning sectors from agricultural insurance to climate monitoring and emergency response-the reliability and reproducibility of data access have become more critical than ever. As EO data pipelines grow in complexity and significance, the challenge extends beyond simple storage: how can it be ensured that data reaches its consumers in a state they can trust, reuse, and act upon?
@@ -67,7 +68,7 @@ Each OCI artifact consists of:
 - **Manifest**-The linking structure that ties together the config and layers. It specifies digests, media types, and ordering.
 
 ![](blog/images/2025-07-16-standardizing-the-eo-data-supply-chain-enabling-reproducible-data-collaboration-at-scale-78c83fe81c3d-2.png)
-*OCI artifacts example*
+_OCI artifacts example_
 
 Artifacts can be published, discovered, pulled, and verified using standard tools such as the ORAS CLI, Docker, or compatible SDKs. This introduces a robust, interoperable mechanism for data delivery-supporting structured metadata, referrers, artifact linking, and layered reuse to promote modularity and efficiency.
 
@@ -89,7 +90,7 @@ OCI-based packaging can be viewed as a structured enhancement of peer-to-peer st
 To evaluate this approach, we applied OCI packaging to the Panoptic Agricultural Satellite Time Series (PASTIS) [benchmark dataset](https://github.com/VSainteuf/pastis-benchmark), which integrates Sentinel-1 radar, Sentinel-2 optical, SPOT very high-resolution (VHR) imagery, and semantic labels.
 
 ![](blog/images/2025-07-16-standardizing-the-eo-data-supply-chain-enabling-reproducible-data-collaboration-at-scale-78c83fe81c3d-3.png)
-*Structure of the PASTIS benchmark dataset*
+_Structure of the PASTIS benchmark dataset_
 
 Two intentionally contrasting partitioning strategies were explored:
 
@@ -101,7 +102,7 @@ The benchmark results, initial setup instructions, and partitioning scripts have
 We published these artifacts to multiple OCI-compatible registries and confirmed that, even under realistic conditions, they could be reliably pushed, pulled, deduplicated, and inspected using standard OCI tooling. Large layers (20 GB and above) were accepted without issue. Thousands of small layers were handled efficiently. Metadata annotations remained intact, and content integrity was successfully verified.
 
 ![](blog/images/2025-07-16-standardizing-the-eo-data-supply-chain-enabling-reproducible-data-collaboration-at-scale-78c83fe81c3d-4.png)
-*Results from OCI Experiments*
+_Results from OCI Experiments_
 
 These experiments demonstrate that OCI-based packaging can accommodate both fine-grained and coarse-grained partitioning strategies. Importantly, integrity checks, digest validation, and artifact-level attestations were all supported and reproducible-capabilities that are essential in workflows where trust, traceability, and regulatory compliance are required.
 

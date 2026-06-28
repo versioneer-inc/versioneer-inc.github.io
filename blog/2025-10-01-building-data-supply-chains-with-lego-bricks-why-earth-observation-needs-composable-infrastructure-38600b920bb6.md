@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # Building Data Supply Chains with Lego Bricks: Why Earth Observation Needs Composable Infrastructure
+
 ![](blog/images/2025-10-01-building-data-supply-chains-with-lego-bricks-why-earth-observation-needs-composable-infrastructure-38600b920bb6-1.png)
 
 Earth Observation has always been about scale. Petabytes of satellite imagery, countless sensor streams, and the ever-growing demand to turn raw data into actionable products. But for many teams, the real bottleneck isn't access to the satellites or sensors. It's the **plumbing**-how data is stored, shared, governed, and reused across groups.
@@ -44,11 +45,11 @@ This creates the foundations of a **data supply chain**: each team enriches the 
 This kind of collaboration unlocks three critical capabilities:
 
 1. **Scalability**
-No more manually wrangling terabytes of data. Buckets, policies, and credentials scale automatically with demand, so teams can focus on science instead of infrastructure.
+   No more manually wrangling terabytes of data. Buckets, policies, and credentials scale automatically with demand, so teams can focus on science instead of infrastructure.
 2. **Reproducibility**
-Every request, grant, and permission is captured **declaratively**. This means workflows are auditable, traceable, and trustworthy-ensuring results can be repeated and verified.
+   Every request, grant, and permission is captured **declaratively**. This means workflows are auditable, traceable, and trustworthy-ensuring results can be repeated and verified.
 3. **Collaboration at Speed**
-Scientists, developers, and analysts can share data products in real time. No waiting for IT tickets or ad-hoc workarounds-just seamless, governed access that accelerates discovery.
+   Scientists, developers, and analysts can share data products in real time. No waiting for IT tickets or ad-hoc workarounds-just seamless, governed access that accelerates discovery.
 
 These aren't abstract ideals. They're the real pain points in Earth Observation projects-and they're solved by treating infrastructure as composable building blocks.
 

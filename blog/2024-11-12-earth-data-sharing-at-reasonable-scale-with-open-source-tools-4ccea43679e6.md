@@ -8,6 +8,7 @@ origin_title: Medium
 ---
 
 # Earth Data Sharing at Reasonable Scale with Open Source Tools
+
 **TL;DR:** Efficiently sharing earth data products at a reasonable scale should be possible relying on familiar concepts and open-source tools - not another complex platform.
 
 When we refer to reasonable scale for earth data products, we mean that tools should reliably manage thousands of generated data items with a total volume ranging from gigabytes to terabytes, all without unnecessary complexity or over-engineering. Our vision is that the approach should fulfill 80% of users' needs right out of the box, while still providing enough flexibility to configure and adjust for up to 99% of specific requirements. For the remaining 1% - which involves highly specialized needs - users may require custom development or a dedicated team to create tailored solutions.
@@ -45,8 +46,7 @@ By leveraging temporary URL capabilities, users can secure direct access to data
 While sharing individual files is already useful, many users prefer to share curated collections of files in custom structures, particularly for earth data packages in modern formats like Zarr, which may include multiple data items (chunks) or metadata files. A practical method for creating such packages is to use symbolic links to form new structures that consist solely of these links. This approach is viable in standard file systems and can be easily executed via the command line.
 
 > Furthermore, this packaging method addresses the challenge of reproducibility. For instance, if only a prefix (a folder) is shared in a bucket, the appearance of new data, such as daily updates, may surprise collaborators. Thus, maintaining an index that includes all the files within the data package is essential.
-> 
-> 
+>
 > It's also important to note that modifying the content of existing files is a different matter. However, features like object storage hashes and bucket versioning are increasingly becoming standard offerings.
 
 To enhance this process, we have integrated such symbolic link creation functionality into above File Browser tool, allowing users to create their own data packages in a user-friendly manner that mimics file copying, where individual items are simply referenced by files within the data package. This intuitive approach for data packaging is the reason we named our maintained fork of File Browser _packageR (_[https://github.com/versioneer-tech/package-r](https://github.com/versioneer-tech/package-r)). Simplifying the organization of curated datasets while maintaining the flexibility and efficiency inherent in file system capabilities.
@@ -61,9 +61,9 @@ The key point is that these so-called pointer files contain either the direct st
 
 ## Additional Benefits for Users
 
-1.   **Enhanced Metadata**: Users can add additional text files (such as README.md, code files, or Jupyter notebooks) alongside the pointer files in a data package that references the annexed files. This allows for content descriptions and satisfies governance and provenance needs by including necessary metadata.
-2.   **Version Control**: The data packages are organized as folders in the file system, allowing users to version them using _Git_, as the large files are replaced by _Git_ manageable pointer files. This means you can easily track changes and maintain, backup and archive data packages with common _Git_ workflows.
-3.   **Improved User Experience**: Users have the option in _packageR_ to just download data packages as ZIP files containing both text and pointer files, or they can opt for _Git_ tarballs in specific formats for use with tools like _Git Annex_ or _DVC_. This functionality enables to work within a standard _Git_ repository and resolve pointers transparently using commands like `git annex get` or `dvc get`, leveraging familiar solutions in data management without introducing new concepts.
+1.  **Enhanced Metadata**: Users can add additional text files (such as README.md, code files, or Jupyter notebooks) alongside the pointer files in a data package that references the annexed files. This allows for content descriptions and satisfies governance and provenance needs by including necessary metadata.
+2.  **Version Control**: The data packages are organized as folders in the file system, allowing users to version them using _Git_, as the large files are replaced by _Git_ manageable pointer files. This means you can easily track changes and maintain, backup and archive data packages with common _Git_ workflows.
+3.  **Improved User Experience**: Users have the option in _packageR_ to just download data packages as ZIP files containing both text and pointer files, or they can opt for _Git_ tarballs in specific formats for use with tools like _Git Annex_ or _DVC_. This functionality enables to work within a standard _Git_ repository and resolve pointers transparently using commands like `git annex get` or `dvc get`, leveraging familiar solutions in data management without introducing new concepts.
 
 ## Open Source Solutions for Scalable Earth Data Sharing
 

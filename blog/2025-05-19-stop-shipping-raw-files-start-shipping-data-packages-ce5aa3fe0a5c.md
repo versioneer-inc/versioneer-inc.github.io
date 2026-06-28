@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # Stop shipping raw files. Start shipping data packages.
+
 ![](blog/images/2025-05-19-stop-shipping-raw-files-start-shipping-data-packages-ce5aa3fe0a5c-1.png)
 
 Ever struggled to grant fine-grained access to your data lake or S3 bucket?

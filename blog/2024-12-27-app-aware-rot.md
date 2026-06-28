@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # Application-Aware ROT Data Minimizing
+
 ![](blog/images/2024-12-27-app-aware-rot-1.png)
 
 Note: This blog post is part 1 of a 3-part blog series on efficient practices to minimize ROT data in domains like Earth Sciences.

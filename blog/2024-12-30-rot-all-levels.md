@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # Minimize ROT Data on All Levels
+
 ![](blog/images/2024-12-30-rot-all-levels-1.png)
 
 **Note**: This blog post is part 2 of a 3-part series on practices to minimize ROT data in data-intensive domains like Earth Sciences.

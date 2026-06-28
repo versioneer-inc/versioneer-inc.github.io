@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # The Cost of Redundancy
+
 In the [previous blog post](blog.html?post=2025-10-31-towards-a-pragmatic-storage-ecosystem-for-earth-sciences-71f9bbeda5b8), we explored how building a data ecosystem-rather than a single monolithic data platform-creates flexibility, scalability, and resilience. We argued that storage design should start from how data assets are consumed, not merely how they are written. The proposed model consists of distinct layers, each optimized for its specific role within the data lifecycle. We also noted that different usage patterns-from long-term preservation to real-time analysis-demand varying levels of performance, accessibility, and durability guarantees.
 
 Naturally, this raises a pragmatic question:

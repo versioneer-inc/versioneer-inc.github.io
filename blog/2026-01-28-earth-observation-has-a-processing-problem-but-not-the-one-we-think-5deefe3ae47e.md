@@ -9,8 +9,9 @@ origin_title: Medium
 ---
 
 # Earth Observation Has a Processing Problem-But Not the One We Think
+
 ![](blog/images/2026-01-28-earth-observation-has-a-processing-problem-but-not-the-one-we-think-5deefe3ae47e-1.png)
-*Compute is no Longer the Limiting Factor. Coordination Is.*
+_Compute is no Longer the Limiting Factor. Coordination Is._
 
 For a long time, I was convinced that the main bottleneck in Earth Observation was simply compute. If only we had bigger clusters, more storage, and easier access to the cloud, everything else would fall into place. That belief shaped an entire generation of EO engineering. Without the luxury of an always-available HPC system, I gradually moved in the cloud from carefully curated machines and shared clusters to elastic cloud infrastructure-from pets to cattle, from local NFS shares to virtually unlimited object storage, from hand-written bash scripts to distributed frameworks.
 

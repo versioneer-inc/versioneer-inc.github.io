@@ -7,7 +7,8 @@ image: blog/images/2026-05-19-from-object-uploads-to-product-transactions-in-eo-
 ---
 
 # From Object Uploads to Product Transactions in EO Data
-*A recent ESA and project initiative presentation, expanded into the story behind the Data Product Orchestrator.*
+
+_A recent ESA and project initiative presentation, expanded into the story behind the Data Product Orchestrator._
 
 Object storage has enabled much of the current cloud-native shift in Earth Observation. It is cheap enough, durable enough, scalable enough, and familiar enough that almost every EO platform ends up using it somewhere. We should not replace that foundation lightly.
 

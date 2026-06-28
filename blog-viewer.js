@@ -1,5 +1,11 @@
 const POSTS = [
   {
+    key: "2026-06-28-a-bucket-full-of-files-is-not-immediately-usable",
+    date: "2026-06-28",
+    file: "blog/2026-06-28-a-bucket-full-of-files-is-not-immediately-usable.md",
+    fallbackTitle: "Before the Code, Before the Portal",
+  },
+  {
     key: "2026-05-19-from-object-uploads-to-product-transactions-in-eo-data",
     date: "2026-05-19",
     file: "blog/2026-05-19-from-object-uploads-to-product-transactions-in-eo-data.md",
@@ -16,7 +22,8 @@ const POSTS = [
     key: "2026-01-28-earth-observation-has-a-processing-problem-but-not-the-one-we-think-5deefe3ae47e",
     date: "2026-01-28",
     file: "blog/2026-01-28-earth-observation-has-a-processing-problem-but-not-the-one-we-think-5deefe3ae47e.md",
-    fallbackTitle: "Earth Observation Has a Processing Problem-But Not the One We Think",
+    fallbackTitle:
+      "Earth Observation Has a Processing Problem-But Not the One We Think",
   },
   {
     key: "2025-10-31-the-cost-of-redundancy-522874a985da",
@@ -72,7 +79,8 @@ const POSTS = [
     key: "2024-11-12-earth-data-sharing-at-reasonable-scale-with-open-source-tools-4ccea43679e6",
     date: "2024-11-12",
     file: "blog/2024-11-12-earth-data-sharing-at-reasonable-scale-with-open-source-tools-4ccea43679e6.md",
-    fallbackTitle: "Earth Data Sharing at Reasonable Scale with Open Source Tools",
+    fallbackTitle:
+      "Earth Data Sharing at Reasonable Scale with Open Source Tools",
   },
   {
     key: "2024-10-26-cloud-storage-for-earth-data-unlocking-its-true-potential-with-the-right-data-management-tools-4306244ec870",
@@ -135,7 +143,9 @@ function renderImage(alt, src, caption = "") {
 
   const safeSrc = escapeHtml(src);
   const safeAlt = escapeHtml(alt);
-  const renderedCaption = caption ? `<figcaption>${renderInline(caption)}</figcaption>` : "";
+  const renderedCaption = caption
+    ? `<figcaption>${renderInline(caption)}</figcaption>`
+    : "";
   return `<figure class="blog-figure"><img src="${safeSrc}" alt="${safeAlt}" loading="lazy" />${renderedCaption}</figure>`;
 }
 
@@ -147,7 +157,9 @@ function renderInline(text) {
     return token;
   };
 
-  let value = text.replace(/`([^`]+)`/g, (_, code) => stash(`<code>${escapeHtml(code)}</code>`));
+  let value = text.replace(/`([^`]+)`/g, (_, code) =>
+    stash(`<code>${escapeHtml(code)}</code>`),
+  );
   value = value.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, href) =>
     stash(renderLink(label, href)),
   );
@@ -261,7 +273,9 @@ function renderMarkdown(markdown) {
   };
 
   const flushCode = () => {
-    state.html += `<pre><code>${escapeHtml(state.codeLines.join("\n"))}</code></pre>`;
+    state.html += `<pre><code>${escapeHtml(
+      state.codeLines.join("\n"),
+    )}</code></pre>`;
     state.inCode = false;
     state.codeLines = [];
     state.codeLanguage = "";
@@ -383,7 +397,9 @@ function markActivePost(postKey) {
 function renderPostList() {
   postList.innerHTML = POSTS.map(
     (post) =>
-      `<a href="blog.html?post=${post.key}" data-post-link="${post.key}"><span class="blog-post-list__date">${escapeHtml(
+      `<a href="blog.html?post=${post.key}" data-post-link="${
+        post.key
+      }"><span class="blog-post-list__date">${escapeHtml(
         post.date,
       )}</span><span class="blog-post-list__title">${escapeHtml(
         post.fallbackTitle,

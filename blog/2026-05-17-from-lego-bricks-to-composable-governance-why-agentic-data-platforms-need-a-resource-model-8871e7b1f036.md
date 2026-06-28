@@ -9,6 +9,7 @@ origin_title: Medium
 ---
 
 # From Lego Bricks to Composable Governance: Why Agentic Data Platforms Need a Resource Model
+
 ![](blog/images/2026-05-17-from-lego-bricks-to-composable-governance-why-agentic-data-platforms-need-a-resource-model-8871e7b1f036-1.png)
 
 In the [earlier post](blog.html?post=2025-10-01-building-data-supply-chains-with-lego-bricks-why-earth-observation-needs-composable-infrastructure-38600b920bb6) on building data supply chains with Lego bricks, we argued that Earth Observation does not only have a scale problem. It has a plumbing problem. Petabytes of data, countless sensor streams, and increasingly capable processing environments are already available. The hard part is how data is stored, shared, governed, reused, and turned into dependable products across teams. The proposal was simple: stop rebuilding the same infrastructure patterns again and again, and start composing reusable building blocks instead. Storage, Data Labs, registries, providers, controllers, and compositions become the Lego bricks of a modern EO data supply chain.

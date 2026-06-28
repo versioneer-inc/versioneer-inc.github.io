@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Versioneer | Domain Data Platform Engineering</title>
@@ -28,7 +28,9 @@
   <body>
     <versioneer-menu></versioneer-menu>
     <versioneer-header></versioneer-header>
-    <versioneer-navbar brand-title="Data Platform Engineering"></versioneer-navbar>
+    <versioneer-navbar
+      brand-title="Data Platform Engineering"
+    ></versioneer-navbar>
 
     <div class="l-wrapper homepage">
       <section class="homepage-hero" id="top">
@@ -84,20 +86,20 @@
               <div class="l-col-12 l-col-md-6 l-offset-md-1">
                 <p class="home-section__lead">
                   A useful data platform is not a generic place where every file
-                  is copied. It is a set of domain-aware workflows that let teams
-                  register, check, version, approve, and publish data products
-                  while keeping ownership close to the people who understand
-                  them.
+                  is copied. It is a set of domain-aware workflows that let
+                  teams register, check, version, approve, and publish data
+                  products while keeping ownership close to the people who
+                  understand them.
                 </p>
                 <p>
                   Versioneer gives those workflows a technical foundation:
                   storage connections, snapshots, access rules, lifecycle
                   states, metadata profiles, workflow definitions, and live
-                  status. In Earth Observation this becomes an EO profile
-                  with STAC, product states, publication gates, and long-term
-                  archival handover. For other domains, the same pattern captures
-                  their own product rules. Publication becomes a governed
-                  transition, not a late file move.
+                  status. In Earth Observation this becomes an EO profile with
+                  STAC, product states, publication gates, and long-term
+                  archival handover. For other domains, the same pattern
+                  captures their own product rules. Publication becomes a
+                  governed transition, not a late file move.
                 </p>
               </div>
             </div>
@@ -112,8 +114,8 @@
               <p>
                 We do not sell a distant black-box platform. Versioneer combines
                 open components, implementation work, and an operated control
-                plane so your platform team can run a domain data platform inside
-                its own cloud.
+                plane so your platform team can run a domain data platform
+                inside its own cloud.
               </p>
             </div>
             <div class="home-offer-grid">
@@ -131,9 +133,9 @@
                 <h3>Hands-on data platform engineering.</h3>
                 <p>
                   We help platform teams and data stewards define the domain
-                  profile: product model, lifecycle states, metadata, validation,
-                  access, publication gates, and the interfaces that make those
-                  rules usable by humans, pipelines, and agents.
+                  profile: product model, lifecycle states, metadata,
+                  validation, access, publication gates, and the interfaces that
+                  make those rules usable by humans, pipelines, and agents.
                 </p>
               </article>
               <article class="home-offer">
@@ -254,8 +256,13 @@
             <div class="l-row">
               <div class="l-col-12 l-col-md-4">
                 <p class="t-overline">How We Facilitate</p>
-                <h2>Composable building blocks, shaped into your domain profile.</h2>
-                <div class="home-involvement" aria-label="Versioneer involvement">
+                <h2>
+                  Composable building blocks, shaped into your domain profile.
+                </h2>
+                <div
+                  class="home-involvement"
+                  aria-label="Versioneer involvement"
+                >
                   <h3>Where we are involved</h3>
                   <p>
                     Our Earth Observation work with EOX, EarthCODE, and EOEPCA
@@ -295,9 +302,9 @@
                     <h3>Run by facilitators close to users</h3>
                     <p>
                       Data stewards, platform teams, and domain leads should own
-                      the operating context. We support them with implementation,
-                      automation, and hands-on engineering so stewardship becomes
-                      visible, repeatable, and less manual.
+                      the operating context. We support them with
+                      implementation, automation, and hands-on engineering so
+                      stewardship becomes visible, repeatable, and less manual.
                     </p>
                   </div>
                   <div class="home-feature">
@@ -312,7 +319,10 @@
                     </p>
                   </div>
                 </div>
-                <a class="home-text-link" href="https://github.com/versioneer-tech/">
+                <a
+                  class="home-text-link"
+                  href="https://github.com/versioneer-tech/"
+                >
                   Explore Versioneer open source
                 </a>
               </div>
@@ -328,7 +338,9 @@
                   <span>datalab.yaml</span>
                   <span>DataLab example</span>
                 </div>
-                <pre class="home-yaml__code"><code><span class="token-muted">apiVersion:</span> pkg.internal/v1beta2
+                <pre
+                  class="home-yaml__code"
+                ><code><span class="token-muted">apiVersion:</span> pkg.internal/v1beta2
 <span class="token-muted">kind:</span> Datalab
 <span class="token-muted">metadata:</span>
   <span class="token-muted">name:</span> s-research-team
@@ -437,8 +449,8 @@
                 </div>
                 <ul class="home-check-list">
                   <li>
-                    Define personal or shared labs with users, admins, and session
-                    state.
+                    Define personal or shared labs with users, admins, and
+                    session state.
                   </li>
                   <li>
                     Attach storage, durable workspaces, credentials, read-only
@@ -468,7 +480,10 @@
                 monitoring, updates, and support.
               </p>
             </div>
-            <div class="home-lifecycle" aria-label="Managed data product lifecycle">
+            <div
+              class="home-lifecycle"
+              aria-label="Managed data product lifecycle"
+            >
               <span>Register</span>
               <span>Inspect</span>
               <span>Stage</span>
@@ -540,14 +555,19 @@
                   </span>
                 </div>
                 <h3>APIs & CRDs</h3>
-                <p>Actions for validation, promotion, publication, archive, and access.</p>
+                <p>
+                  Actions for validation, promotion, publication, archive, and
+                  access.
+                </p>
               </article>
               <article class="home-capability home-capability--federation">
                 <div class="home-capability__top">
                   <span class="home-card__eyebrow">Storage</span>
                   <span class="home-capability__icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24">
-                      <path d="M4 7c0-1.7 2.7-3 6-3s6 1.3 6 3-2.7 3-6 3-6-1.3-6-3z" />
+                      <path
+                        d="M4 7c0-1.7 2.7-3 6-3s6 1.3 6 3-2.7 3-6 3-6-1.3-6-3z"
+                      />
                       <path d="M4 7v6c0 1.7 2.7 3 6 3s6-1.3 6-3V7" />
                       <path d="M16 11h2.5a2.5 2.5 0 0 1 0 5H18" />
                       <path d="M18 16h2" />
@@ -593,20 +613,28 @@
                   </span>
                 </div>
                 <h3>Publication</h3>
-                <p>Metadata, catalog updates, webhooks, and long-term storage steps.</p>
+                <p>
+                  Metadata, catalog updates, webhooks, and long-term storage
+                  steps.
+                </p>
               </article>
               <article class="home-capability home-capability--governance">
                 <div class="home-capability__top">
                   <span class="home-card__eyebrow">Policy</span>
                   <span class="home-capability__icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24">
-                      <path d="M12 3 5 6v6c0 4.2 2.8 7.5 7 9 4.2-1.5 7-4.8 7-9V6z" />
+                      <path
+                        d="M12 3 5 6v6c0 4.2 2.8 7.5 7 9 4.2-1.5 7-4.8 7-9V6z"
+                      />
                       <path d="M9.5 12.5 11 14l3.5-4" />
                     </svg>
                   </span>
                 </div>
                 <h3>Governance & Access</h3>
-                <p>Public, embargoed, and licensed access, established through common OIDC and STS concepts with secrets handled safely.</p>
+                <p>
+                  Public, embargoed, and licensed access, established through
+                  common OIDC and STS concepts with secrets handled safely.
+                </p>
               </article>
               <article class="home-capability home-capability--audit">
                 <div class="home-capability__top">
@@ -620,7 +648,10 @@
                   </span>
                 </div>
                 <h3>Audit Log</h3>
-                <p>Git history, lifecycle events, current status, and user/API views.</p>
+                <p>
+                  Git history, lifecycle events, current status, and user/API
+                  views.
+                </p>
               </article>
               <article class="home-capability home-capability--evolving">
                 <div class="home-capability__top">
@@ -636,7 +667,10 @@
                   </span>
                 </div>
                 <h3>Changing Datasets</h3>
-                <p>Version graphs, delta copy, reused unchanged content, and clear change reports.</p>
+                <p>
+                  Version graphs, delta copy, reused unchanged content, and
+                  clear change reports.
+                </p>
               </article>
               <article class="home-capability home-capability--packaging">
                 <div class="home-capability__top">
@@ -650,7 +684,10 @@
                   </span>
                 </div>
                 <h3>Service Packaging</h3>
-                <p>Reusable Helm or Kustomize packages, docs, reference deployments, and demos.</p>
+                <p>
+                  Reusable Helm or Kustomize packages, docs, reference
+                  deployments, and demos.
+                </p>
               </article>
             </div>
           </div>

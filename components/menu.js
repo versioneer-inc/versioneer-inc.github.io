@@ -40,7 +40,7 @@ customElements.define(
                     }" aria-current="page" class="c-nav-link">${
                       item.title
                     }</a></li>
-                `
+                `,
                   )
                   .join("")}
                 </ul>
@@ -53,5 +53,5 @@ customElements.define(
         document.body.classList.remove("is-locked");
       });
     }
-  }
+  },
 );
