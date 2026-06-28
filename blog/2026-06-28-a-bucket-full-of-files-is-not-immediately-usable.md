@@ -4,6 +4,8 @@ title: "Before the Code, Before the Portal"
 description: "How packageR helps EO teams inspect, share, and publish workspace data where it already lives."
 tags: "earth-observation, cloud-native-data, data-access, stac, package-r, datalab, eoxhub, eodash"
 image: blog/images/2026-06-28-package-r-authenticated-image-preview.png
+origin_url: https://medium.com/@stefan.achtsnit_41940/before-the-code-before-the-portal-2e2b8b87e665
+origin_title: Medium
 ---
 
 # Before the Code, Before the Portal
