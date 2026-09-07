@@ -1,5 +1,31 @@
 const POSTS = [
   {
+    key: "2026-09-05-platform-lifecycle-and-continuity-operations",
+    date: "2026-09-05",
+    file: "blog/2026-09-05-platform-lifecycle-and-continuity-operations.md",
+    fallbackTitle:
+      "Platform Lifecycle and Continuity Operations: From Release to Recovery",
+  },
+  {
+    key: "2026-09-04-reliability-and-remediation-operations",
+    date: "2026-09-04",
+    file: "blog/2026-09-04-reliability-and-remediation-operations.md",
+    fallbackTitle:
+      "Platform Reliability and Remediation Operations: From Alert to Recovery",
+  },
+  {
+    key: "2026-09-03-security-operations",
+    date: "2026-09-03",
+    file: "blog/2026-09-03-security-operations.md",
+    fallbackTitle: "Platform Security Operations: From Controls to Evidence",
+  },
+  {
+    key: "2026-09-03-platform-operations",
+    date: "2026-09-03",
+    file: "blog/2026-09-03-platform-operations.md",
+    fallbackTitle: "Platform Operations: Security, Reliability, and Lifecycle",
+  },
+  {
     key: "2026-06-28-a-bucket-full-of-files-is-not-immediately-usable",
     date: "2026-06-28",
     file: "blog/2026-06-28-a-bucket-full-of-files-is-not-immediately-usable.md",
@@ -149,6 +175,36 @@ function renderImage(alt, src, caption = "") {
   return `<figure class="blog-figure"><img src="${safeSrc}" alt="${safeAlt}" loading="lazy" />${renderedCaption}</figure>`;
 }
 
+function parseTableRow(line) {
+  return line
+    .trim()
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split("|")
+    .map((cell) => cell.trim());
+}
+
+function isTableDivider(line) {
+  const cells = parseTableRow(line);
+  return cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+}
+
+function renderTable(headers, rows) {
+  const headerHtml = headers
+    .map((header) => `<th scope="col">${renderInline(header)}</th>`)
+    .join("");
+  const bodyHtml = rows
+    .map(
+      (row) =>
+        `<tr>${headers
+          .map((_, index) => `<td>${renderInline(row[index] || "")}</td>`)
+          .join("")}</tr>`,
+    )
+    .join("");
+
+  return `<div class="blog-table-wrapper" role="region" aria-label="Scrollable table" tabindex="0"><table><thead><tr>${headerHtml}</tr></thead><tbody>${bodyHtml}</tbody></table></div>`;
+}
+
 function renderInline(text) {
   const tokens = [];
   const stash = (html) => {
@@ -281,7 +337,8 @@ function renderMarkdown(markdown) {
     state.codeLanguage = "";
   };
 
-  lines.forEach((line) => {
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
     const trimmed = line.trim();
 
     if (state.inCode) {
@@ -290,26 +347,46 @@ function renderMarkdown(markdown) {
       } else {
         state.codeLines.push(line);
       }
-      return;
+      continue;
     }
 
     if (/^```/.test(trimmed)) {
       flushAll(state);
       state.inCode = true;
       state.codeLanguage = trimmed.replace(/^```/, "");
-      return;
+      continue;
     }
 
     if (!trimmed) {
       flushAll(state);
-      return;
+      continue;
+    }
+
+    if (
+      /^\|.*\|$/.test(trimmed) &&
+      index + 1 < lines.length &&
+      isTableDivider(lines[index + 1])
+    ) {
+      flushAll(state);
+      const headers = parseTableRow(line);
+      const rows = [];
+      index += 2;
+
+      while (index < lines.length && /^\s*\|.*\|\s*$/.test(lines[index])) {
+        rows.push(parseTableRow(lines[index]));
+        index += 1;
+      }
+
+      index -= 1;
+      state.html += renderTable(headers, rows);
+      continue;
     }
 
     if (/^>\s?/.test(trimmed)) {
       flushParagraph(state);
       flushList(state);
       state.blockquote.push(trimmed.replace(/^>\s?/, ""));
-      return;
+      continue;
     }
 
     if (/^#{1,6}\s+/.test(trimmed)) {
@@ -317,7 +394,7 @@ function renderMarkdown(markdown) {
       const level = trimmed.match(/^#+/)[0].length;
       const text = trimmed.replace(/^#{1,6}\s+/, "");
       state.html += `<h${level}>${renderInline(text)}</h${level}>`;
-      return;
+      continue;
     }
 
     const imageMatch = trimmed.match(
@@ -327,7 +404,7 @@ function renderMarkdown(markdown) {
       flushAll(state);
       const [, alt, src, caption = ""] = imageMatch;
       state.html += renderImage(alt, src, caption);
-      return;
+      continue;
     }
 
     if (/^[-*]\s+/.test(trimmed)) {
@@ -338,7 +415,7 @@ function renderMarkdown(markdown) {
         state.listType = "unordered";
       }
       state.listItems.push(trimmed.replace(/^[-*]\s+/, ""));
-      return;
+      continue;
     }
 
     if (/^\d+\.\s+/.test(trimmed)) {
@@ -349,11 +426,17 @@ function renderMarkdown(markdown) {
         state.listType = "ordered";
       }
       state.listItems.push(trimmed.replace(/^\d+\.\s+/, ""));
-      return;
+      continue;
+    }
+
+    if (state.listItems.length > 0) {
+      const lastItem = state.listItems.length - 1;
+      state.listItems[lastItem] += ` ${trimmed}`;
+      continue;
     }
 
     state.paragraph.push(trimmed);
-  });
+  }
 
   if (state.inCode) {
     flushCode();
