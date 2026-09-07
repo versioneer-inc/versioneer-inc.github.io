@@ -78,7 +78,7 @@ clear without creating isolated operating processes.
 
 Versioneer provides Kubernetes clusters that run in our customers' cloud
 environments. This operating model keeps
-[Kubernetes Security Posture Management (KSPM)](https://orca.security/resources/blog/what-is-kspm/)
+Kubernetes Security Posture Management (KSPM)
 in our hands while the infrastructure remains under customer control. We use
 established, automated GitOps practices to operate Kubernetes fleets
 consistently on customer infrastructure. This series captures the common
