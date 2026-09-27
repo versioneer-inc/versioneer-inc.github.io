@@ -80,10 +80,18 @@ customElements.define(
                           ? `
                       <nav class="c-footer__logo-downloads" aria-label="Versioneer media kit downloads">
                         <span>Media Kit:</span>
-                        <a href="./logo_versioneer_white.png" download>White PNG</a>
-                        <a href="./logo_versioneer_white.svg" download>White SVG</a>
-                        <a href="./logo_versioneer_green.png" download>Green PNG</a>
-                        <a href="./logo_versioneer_green.svg" download>Green SVG</a>
+                        <span class="c-footer__logo-group">
+                          <span>White Logo</span>
+                          <a href="./logo_versioneer_white.png" download>PNG</a>
+                          <span aria-hidden="true">|</span>
+                          <a href="./logo_versioneer_white.svg" download>SVG</a>
+                        </span>
+                        <span class="c-footer__logo-group">
+                          <span>Green Logo</span>
+                          <a href="./logo_versioneer_green.png" download>PNG</a>
+                          <span aria-hidden="true">|</span>
+                          <a href="./logo_versioneer_green.svg" download>SVG</a>
+                        </span>
                       </nav>
                       `
                           : ""

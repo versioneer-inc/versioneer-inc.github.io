@@ -7734,18 +7734,19 @@ body.logged-in #site-header.is-sticky {
   flex-wrap: wrap;
 }
 .c-footer__meta {
+  color: #c8d7c3;
   gap: 1.2rem 4.8rem;
 }
 .c-footer__logo-downloads {
-  gap: 0.8rem 1.6rem;
+  gap: 0.8rem 2.4rem;
 }
-.c-footer__logo-downloads span {
-  color: #dad7cd;
-  font-weight: 700;
+.c-footer__logo-group {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.8rem;
 }
 .c-footer__logo-downloads a {
-  color: #a3b18a;
-  font-weight: 700;
+  color: inherit;
   text-decoration: none;
 }
 .c-footer__logo-downloads a:hover,
