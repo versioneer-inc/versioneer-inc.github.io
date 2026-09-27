@@ -31,11 +31,7 @@ customElements.define(
             <section id="site-footer">
                 <div class="l-container">
                     <div class="c-footer u-py-5 u-py-sm-6">
-                    <div class="c-footer__layout ${
-                      this.hasAttribute("logo-kit")
-                        ? "c-footer__layout--with-logo"
-                        : ""
-                    }">
+                    <div class="c-footer__layout">
                         <div class="c-footer__contact">
                           <h3 class="u-mb-2">
                             ${this.getAttribute("title")}
@@ -74,27 +70,25 @@ customElements.define(
                             </div>
                         </nav>
                         </div>
-                        ${
-                          this.hasAttribute("logo-kit")
-                            ? `
-                        <aside class="c-footer__logo" aria-label="Versioneer logo downloads">
-                          <img
-                            src="./logo_versioneer_green.svg"
-                            alt="Versioneer — Meshing Earth Data"
-                            loading="lazy"
-                          >
-                          <div class="c-footer__logo-links">
-                            <a href="./logo_versioneer_green.png" download>PNG</a>
-                            <a href="./logo_versioneer_green.svg" download>SVG</a>
-                          </div>
-                        </aside>
-                        `
-                            : ""
-                        }
                     </div>
                     </div>
                     <!-- /.c-footer -->
-                    <p class="u-f-sm u-mt-4 u-mb-0">Versioneer © ${new Date().getFullYear()}</p>
+                    <div class="c-footer__meta u-f-sm u-mt-4">
+                      <p class="u-mb-0">Versioneer © ${new Date().getFullYear()}</p>
+                      ${
+                        this.hasAttribute("logo-kit")
+                          ? `
+                      <nav class="c-footer__logo-downloads" aria-label="Versioneer media kit downloads">
+                        <span>Media Kit:</span>
+                        <a href="./logo_versioneer_white.png" download>White PNG</a>
+                        <a href="./logo_versioneer_white.svg" download>White SVG</a>
+                        <a href="./logo_versioneer_green.png" download>Green PNG</a>
+                        <a href="./logo_versioneer_green.svg" download>Green SVG</a>
+                      </nav>
+                      `
+                          : ""
+                      }
+                    </div>
                 </div>
                 <!-- /.l-container -->
                 </section>
