@@ -7710,6 +7710,72 @@ body.logged-in #site-header.is-sticky {
 .c-footer .c-nav__link:hover {
   color: #dad7cd;
 }
+.logo-kit {
+  border-top: 0.1rem solid #3a5a40;
+  padding-bottom: 6.4rem;
+  padding-top: 6.4rem;
+}
+.logo-kit__header {
+  max-width: 68rem;
+}
+.logo-kit__header h2 {
+  margin-bottom: 1.6rem;
+}
+.logo-kit__header > p:last-child {
+  margin-bottom: 0;
+}
+.logo-kit__grid {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 3.2rem;
+}
+.logo-kit-card {
+  background: #f5f1e7;
+  border: 0.1rem solid #588157;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.logo-kit-card__preview {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.logo-kit-card__body {
+  align-items: center;
+  background: #f5f1e7;
+  display: flex;
+  gap: 1.6rem;
+  justify-content: space-between;
+  padding: 1.6rem 2rem;
+}
+.homepage .logo-kit-card__body h3 {
+  color: #10201f;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.logo-kit-card__downloads {
+  display: flex;
+  gap: 0.8rem;
+}
+.logo-kit-card__downloads a {
+  border: 0.1rem solid #3a5a40;
+  border-radius: 0.4rem;
+  color: #344e41;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.logo-kit-card__downloads a:hover,
+.logo-kit-card__downloads a:focus-visible {
+  background: #344e41;
+  color: #f5f1e7;
+}
 .c-search {
   position: relative;
   width: auto;
@@ -9512,6 +9578,20 @@ p,
 }
 
 @media (max-width: 44.99em) {
+  .logo-kit {
+    padding-bottom: 4.8rem;
+    padding-top: 4.8rem;
+  }
+
+  .logo-kit__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-kit-card__body {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   #site-header .c-header {
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
