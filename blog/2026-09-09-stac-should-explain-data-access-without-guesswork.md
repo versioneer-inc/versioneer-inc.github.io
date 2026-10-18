@@ -288,15 +288,14 @@ independent proof of identity or protection against request forgery. HTTPS
 protects requests in transit; access depends on the validated JWT and the
 gateway's authorization checks.
 
-With either flow, we can keep using AWS CLI, Boto3,
-[rclone](https://rclone.org/s3/#authentication), and GDAL against the configured
-S3 endpoint. A credential helper can obtain a token, exchange it at STS or
+With either flow, we can keep using AWS CLI, Boto3, rclone, and GDAL against
+the configured S3 endpoint. A credential helper can obtain a token, exchange it at STS or
 build the direct JWT credentials, and return the usual key, secret, and
-session token. AWS CLI and Boto3 support a configured
-[`credential_process`](https://docs.aws.amazon.com/sdkref/latest/guide/feature-process-credentials.html)
-for this: when the helper also returns `Expiration`, the tool can rerun it
-automatically before the credentials expire. The helper integration differs
-by tool, but token handling can stay out of the analysis code.
+session token. AWS CLI and Boto3 can run the helper command specified by
+`credential_process` in an AWS profile. When the helper also returns an
+expiry time (`Expiration`), the tool can rerun it automatically before the
+credentials expire. The helper integration differs by tool, but token
+handling can stay out of the analysis code.
 
 ## When all the workers start together
 
@@ -311,26 +310,12 @@ once. We still have to reuse credentials within their scope, cache them until
 refresh is due, and spread refresh requests over time. STS clients can use
 those techniques too.
 
-Automatic refresh works when the reader uses that credential provider
-throughout the job. Supplying credentials once at startup does not give the
-reader a way to obtain replacements; each worker must use the refresh path
-too. With GDAL, test refresh while a dataset stays open as well as before
-opening the next asset. A successful first read does not test credential
-renewal.
+Every worker needs a refresh path that reaches its data reader. For GDAL,
+test that path with a dataset kept open across token expiry. Range reads
+should reuse credentials without another token exchange.
 
-Both S3 designs can verify credentials without a database of issued sessions.
-An STS session token can carry protected session details; a direct JWT carries
-claims the gateway validates against trusted keys. STS does not inherently
-require a session database. Current permission checks, quotas, and usage
-records can still involve other services in either design.
-
-These choices belong alongside the usual storage practices: run compute near
-the data where possible, read the required ranges, control concurrency, and
-handle throttling with bounded retries and backoff. AWS's
-[S3 performance guidance](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance-guidelines.html)
-covers region placement, range reads, and responses such as `503 Slow Down`.
-An access flow should let the data reader apply those practices without
-turning each small read into a new login or token exchange.
+Both flows can verify credentials without a session database. Permission
+checks, quotas, and usage tracking may still require state.
 
 ## Connect STAC to the credential provider
 
