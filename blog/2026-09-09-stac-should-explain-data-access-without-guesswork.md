@@ -4,6 +4,8 @@ title: "STAC Should Explain Data Access Without Guesswork"
 description: "A STAC search can succeed while the first data read fails. The missing handoff to GDAL brings together fair access, cloud costs, and short-lived S3 credentials."
 image: "blog/images/2026-09-09-stac-access-hero.png"
 tags: "earth-observation, stac, metadata, data-access, authentication, s3, sigv4, cloud-native-data"
+origin_title: Medium
+origin_url: https://medium.com/@stefan.achtsnit_41940/stac-should-explain-data-access-without-guesswork-10c6053cd551
 ---
 
 # STAC Should Explain Data Access Without Guesswork
