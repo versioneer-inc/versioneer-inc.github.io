@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">From STAC discovery to reading the data</title>
+  <desc id="description">A STAC search finds a scene and returns an asset link. Reading without credentials can fail with 403 Forbidden. STAC access metadata describes how to obtain temporary S3 credentials, through STS or a JWT session token, so GDAL and Dask workers can read COG byte ranges.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#152e37"/>
+      <stop offset="1" stop-color="#09191f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#18333d"/>
+      <stop offset="1" stop-color="#11282f"/>
+    </linearGradient>
+    <linearGradient id="access-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a3d3d"/>
+      <stop offset="1" stop-color="#122e32"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#83b9bb" stroke-width="0.6"/>
+    </pattern>
+    <pattern id="map-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#a3d8cb" stroke-width="0.6"/>
+    </pattern>
+    <clipPath id="map-clip">
+      <rect x="88" y="307" width="236" height="126" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.13"/>
+  <path d="M64 181H1136" stroke="#36515a" stroke-width="1"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="49" fill="#8bd7bf" font-size="13" font-weight="700" letter-spacing="2.2">STAC / DATA ACCESS</text>
+    <text x="64" y="108" fill="#f4f5ed" font-size="44" font-weight="700" letter-spacing="-1">Found the scene. Now read the pixels.</text>
+    <text x="64" y="150" fill="#b4c9cc" font-size="20">The handoff from catalog metadata to storage credentials.</text>
+
+    <g fill="#a1b9bf" font-size="13" font-weight="700" letter-spacing="1.4">
+      <text x="64" y="220">01 / DISCOVER</text>
+      <text x="458" y="220">02 / OBTAIN CREDENTIALS</text>
+      <text x="852" y="220">03 / READ</text>
+    </g>
+
+    <rect x="64" y="245" width="284" height="270" rx="14" fill="url(#card)" stroke="#3b5963"/>
+    <rect x="458" y="245" width="284" height="270" rx="14" fill="url(#access-card)" stroke="#6dcbaa" stroke-width="1.5"/>
+    <rect x="852" y="245" width="284" height="270" rx="14" fill="url(#card)" stroke="#3b5963"/>
+
+    <text x="88" y="284" fill="#f4f5ed" font-size="25" font-weight="700">STAC</text>
+    <rect x="239" y="263" width="85" height="28" rx="14" fill="#244f43"/>
+    <circle cx="253" cy="277" r="3" fill="#8aebbb"/>
+    <text x="265" y="282" fill="#b9f6d4" font-size="13" font-weight="700">200 OK</text>
+
+    <g clip-path="url(#map-clip)">
+      <rect x="88" y="307" width="236" height="126" fill="#153b4c"/>
+      <path d="M83 300H229L221 321 235 337 218 352 231 369 212 392 222 416 205 440H83Z" fill="#3a6558"/>
+      <path d="M89 324 126 311 157 325 174 313 211 328 204 347 175 350 150 370 115 364 87 381Z" fill="#567d58"/>
+      <path d="M83 398 123 380 153 391 181 374 212 392 204 421 180 438H83Z" fill="#778f5b"/>
+      <path d="M324 314 297 330 305 348 283 359 291 382 270 408 280 439H330Z" fill="#3d695b"/>
+      <path d="M147 307 142 333 158 353 149 375 166 398 157 433" fill="none" stroke="#9fbaa1" stroke-width="2" opacity="0.45"/>
+      <rect x="88" y="307" width="236" height="126" fill="url(#map-grid)" opacity="0.2"/>
+      <rect x="150" y="332" width="106" height="76" fill="#88f1bf" fill-opacity="0.06" stroke="#c0f6ce" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <path d="M150 346V332H164M242 332H256V346M256 394V408H242M164 408H150V394" fill="none" stroke="#d0ffde" stroke-width="2.5"/>
+      <circle cx="203" cy="370" r="4" fill="#d0ffde"/>
+      <path d="M203 359V365M203 375V381M192 370H198M208 370H214" stroke="#d0ffde" stroke-width="1.5"/>
+    </g>
+    <text x="88" y="465" fill="#d8e6df" font-family="monospace" font-size="15">href: s3://…/scene.tif</text>
+    <text x="88" y="492" fill="#adc3c4" font-size="14">Scene found. Asset linked.</text>
+
+    <path d="M348 329H363" fill="none" stroke="#cb8c86" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="400" y="307" fill="#d5a29b" font-size="12" text-anchor="middle">No setup</text>
+    <rect x="365" y="316" width="73" height="27" rx="7" fill="#412e32" stroke="#a06d6c"/>
+    <text x="401.5" y="335" fill="#f1b6ab" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">403</text>
+    <path d="M348 394H444M435 388 444 394 435 400" fill="none" stroke="#85e2ba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="400" y="419" fill="#b1c8c8" font-size="12" text-anchor="middle">With access</text>
+
+    <text x="482" y="284" fill="#f4f5ed" font-size="24" font-weight="700">Access metadata</text>
+    <rect x="482" y="304" width="166" height="28" rx="6" fill="#254d47"/>
+    <text x="495" y="324" fill="#baf2d2" font-family="monospace" font-size="16">auth:schemes</text>
+    <g fill="none" stroke="#8ce4bc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="497" cy="377" r="11"/>
+      <path d="M508 377H532M522 377V385M530 377V382"/>
+    </g>
+    <text x="546" y="371" fill="#e1efdf" font-size="17">Token → temporary</text>
+    <text x="546" y="395" fill="#e1efdf" font-size="17">S3 credentials</text>
+    <path d="M482 434H718" stroke="#3f6661"/>
+    <text x="482" y="463" fill="#b9d4ca" font-size="15">STS exchange</text>
+    <text x="482" y="487" fill="#b9d4ca" font-size="15">or JWT session token</text>
+
+    <path d="M756 394H838M829 388 838 394 829 400" fill="none" stroke="#85e2ba" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="797" y="419" fill="#b1c8c8" font-size="13" text-anchor="middle">SigV4</text>
+
+    <text x="876" y="284" fill="#f4f5ed" font-size="24" font-weight="700">Read the data</text>
+    <g stroke="#85c7d4" stroke-width="1.6">
+      <path d="M883 342V390C883 405 955 405 955 390V342" fill="#1f4d59"/>
+      <ellipse cx="919" cy="342" rx="36" ry="11" fill="#2c626a"/>
+      <path d="M883 365C883 380 955 380 955 365" fill="none" opacity="0.45"/>
+    </g>
+    <text x="919" y="392" fill="#dcf1e9" font-size="18" font-weight="700" text-anchor="middle">S3</text>
+    <path d="M970 367H1013M1006 361 1013 367 1006 373" fill="none" stroke="#85c7d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(1032 330)">
+      <rect width="80" height="80" rx="5" fill="#20433f"/>
+      <g width="18" height="18">
+        <rect x="1" y="1" width="18" height="18" fill="#537e57"/>
+        <rect x="21" y="1" width="18" height="18" fill="#6a965f"/>
+        <rect x="41" y="1" width="18" height="18" fill="#95af68"/>
+        <rect x="61" y="1" width="18" height="18" fill="#bed783"/>
+        <rect x="1" y="21" width="18" height="18" fill="#3e765a"/>
+        <rect x="21" y="21" width="18" height="18" fill="#79a466"/>
+        <rect x="41" y="21" width="18" height="18" fill="#b0c97a"/>
+        <rect x="61" y="21" width="18" height="18" fill="#d3df91"/>
+        <rect x="1" y="41" width="18" height="18" fill="#398b84"/>
+        <rect x="21" y="41" width="18" height="18" fill="#4f997b"/>
+        <rect x="41" y="41" width="18" height="18" fill="#78ad70"/>
+        <rect x="61" y="41" width="18" height="18" fill="#a5c477"/>
+        <rect x="1" y="61" width="18" height="18" fill="#367d8d"/>
+        <rect x="21" y="61" width="18" height="18" fill="#429b95"/>
+        <rect x="41" y="61" width="18" height="18" fill="#63b394"/>
+        <rect x="61" y="61" width="18" height="18" fill="#8bc69b"/>
+      </g>
+    </g>
+    <g fill="#86c7c2">
+      <rect x="876" y="434" width="236" height="3" rx="1.5" opacity="0.15"/>
+      <rect x="889" y="434" width="29" height="3" rx="1.5"/>
+      <rect x="953" y="434" width="40" height="3" rx="1.5"/>
+      <rect x="1055" y="434" width="28" height="3" rx="1.5"/>
+    </g>
+    <text x="876" y="467" fill="#dce9e3" font-size="17">COG range reads</text>
+    <text x="876" y="492" fill="#adc3c4" font-size="14">GDAL / Dask workers</text>
+
+    <text x="64" y="575" fill="#e1e9df" font-size="22">Discovery is only half the job.</text>
+    <text x="1136" y="575" fill="#a2c4bd" font-size="15" text-anchor="end">Metadata → credentials → pixels</text>
+  </g>
+</svg>

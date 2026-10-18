@@ -1,5 +1,11 @@
 const POSTS = [
   {
+    key: "2026-09-09-stac-should-explain-data-access-without-guesswork",
+    date: "2026-09-09",
+    file: "blog/2026-09-09-stac-should-explain-data-access-without-guesswork.md",
+    fallbackTitle: "STAC Should Explain Data Access Without Guesswork",
+  },
+  {
     key: "2026-09-05-platform-lifecycle-and-continuity-operations",
     date: "2026-09-05",
     file: "blog/2026-09-05-platform-lifecycle-and-continuity-operations.md",
