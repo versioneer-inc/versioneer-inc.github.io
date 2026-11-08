@@ -6,7 +6,7 @@ image: "blog/images/2026-11-08-act-on-your-behalf-teaser.svg"
 tags: "earth-observation, delegated-access, token-exchange, keycloak"
 origin_title: Medium
 origin_url: https://medium.com/@stefan.achtsnit_41940/act-on-your-behalf-a-five-minute-token-for-a-stac-export-955d420c1fc4
-status: draft
+status: published
 ---
 
 # Act on Your Behalf: A five-minute token for a STAC export
