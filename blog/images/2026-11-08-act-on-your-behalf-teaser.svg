@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">File this for me?</title>
+  <desc id="description">Alice asks a delegate to file a folder for her and hands over the team archive key.</desc>
+  <rect width="1200" height="675" fill="#F7F3E8"/>
+
+  <g font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" text-anchor="middle" fill="#183537">
+    <text x="600" y="246" font-size="100" letter-spacing="-3">“File this for me?”</text>
+    <rect x="92" y="337" width="288" height="154" rx="34" fill="#183537"/>
+    <text x="236" y="440" font-size="76" fill="#F7F3E8">Alice</text>
+    <rect x="662" y="337" width="446" height="154" rx="34" fill="#183537"/>
+    <text x="885" y="438" font-size="70" letter-spacing="-1.5" fill="#F7F3E8">Delegate</text>
+  </g>
+
+  <g fill="none" stroke="#183537" stroke-width="15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M397 414H636m-30-27 30 27-30 27"/>
+    <circle cx="509" cy="414" r="55" fill="#F1B655" stroke="#F7F3E8" stroke-width="10"/>
+    <circle cx="493" cy="414" r="13" stroke-width="8"/>
+    <path d="M506 414h30v12m-11-12v9" stroke-width="8"/>
+  </g>
+</svg>

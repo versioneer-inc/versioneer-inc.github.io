@@ -2,29 +2,36 @@
 date: 2026-11-08
 title: "Act on Your Behalf: A five-minute token for a STAC export"
 description: "Alice narrows her notebook's Kubernetes access for a catalogue export. The Job's S3 access still depends on the workspace credentials it receives."
-image: "blog/images/2026-11-08-delegated-workspace-access.svg"
+image: "blog/images/2026-11-08-act-on-your-behalf-teaser.svg"
 tags: "earth-observation, delegated-access, token-exchange, keycloak"
+origin_title: Medium
+origin_url: https://medium.com/@stefan.achtsnit_41940/act-on-your-behalf-a-five-minute-token-for-a-stac-export-955d420c1fc4
 status: draft
 ---
 
 # Act on Your Behalf: A five-minute token for a STAC export
 
-Using a five-minute token, Alice's notebook submitted a Job in the STAC
+![Alice hands a key to a delegate: “File this for me?”](blog/images/2026-11-08-act-on-your-behalf-teaser.svg)
+
+Alice writes a short script on an Earth observation (EO) platform
+running on Kubernetes. It reads a few records from a STAC catalogue and
+writes a GeoParquet file to S3.
+
+Her normal login also lets her provision managed services, connect to
+a Kubernetes cluster or virtual cluster, and access other data in her
+team's private object storage. Giving an export script that full access
+is a large grant of trust for a small task. The export needs to read the
+catalogue and write one result.
+
+Using a five-minute token, Alice's script submitted a Job in the STAC
 namespace to export three catalogue records to GeoParquet in S3. The token
-narrowed the notebook's Kubernetes permissions, while the Job's S3 access
+narrowed the script's Kubernetes permissions, while the Job's S3 access
 still depended on the workspace credentials passed through a Kubernetes
 Secret.
 
-Alice's normal login also lets her provision managed services, connect to
-a Kubernetes cluster or virtual cluster, and access other data in her
-team's private object storage. Giving an export script that full access
-is a large grant of trust for a small task. She needs to read the catalogue
-and write one result.
-
 The [STAC with managed PostgreSQL notebook](https://github.com/EOEPCA/workspace/blob/main/docs/getting-started/stac-fastapi-pgstac.ipynb)
 follows that export from token request to checked file. The same access
-problem applies to a scheduled pipeline
-or an agent working on an Earth observation (EO) task.
+problem applies to a scheduled pipeline or an agent working on an EO task.
 
 ## The namespace profile Alice needs
 
@@ -170,17 +177,19 @@ This matters if Alice hands the token to another process: its Kubernetes
 permissions are smaller, but it can still request the service credentials
 that role permits.
 
-A credential broker could sit behind Workspace API and use Provider
-Datalab's declared access settings. For this export, it would issue
-credentials for the permitted inputs and output location, operations,
-and lifetime. It would also have to prevent the caller from retrieving
+Workspace API can act as the Security Token Service (STS) in this design,
+exchanging a workspace token for task credentials based on Provider
+Datalab's declared access settings. For this export, those credentials
+would be limited to the permitted inputs, output location, operations,
+and lifetime. The API would also have to prevent the caller from retrieving
 a broader connection. A narrow key is of little help if the same caller
 can fetch wider credentials.
 
-On backends that support STS, the broker could request temporary
-credentials with a policy restricted to that grant. The connection API
-and S3 client would need to carry the session token and expiry as well as
-the access key. Other backends need their own supported mechanism.
+For S3, the client would receive the access key, secret key, session token,
+and expiry, with the storage backend enforcing the task's policy.
+We covered this storage-side exchange in
+[STAC Should Explain Data Access Without Guesswork](blog.html?post=2026-09-09-stac-should-explain-data-access-without-guesswork).
+Other backends need their own supported mechanism.
 The notebook does not yet perform that exchange or apply a per-task IAM
 policy. A check of that extension would need to show that the export can
 read its inputs and write its result, while access to another task's data
