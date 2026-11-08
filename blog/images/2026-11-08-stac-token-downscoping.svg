@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title description">
+  <title id="title">Exchange an administrator token for a STAC namespace token</title>
+  <desc id="description">Alice has cluster administrator access to vc0 and holds the demo profile role. She requests only that profile through Workspace API. The API checks her permissions and sends her token to Keycloak for exchange. The returned token keeps Alice's subject and the namespace role, but excludes administrator and other profile roles. The process receives the restricted token.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8" fill="none" stroke="#587281" stroke-width="1.5"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #173042; }
+      .heading { font-size: 30px; font-weight: 700; }
+      .label { font-size: 24px; font-weight: 700; }
+      .body { font-size: 21px; }
+      .small { font-size: 19px; }
+      .line { fill: none; stroke: #587281; stroke-width: 2.5; marker-end: url(#arrow); }
+      .box { fill: #fff; stroke: #b9cdd6; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1200" height="850" rx="20" fill="#f6f9fb"/>
+  <text x="60" y="64" class="heading">From cluster administrator to namespace worker</text>
+  <text x="60" y="102" class="body">Workspace ws-alice / vCluster vc0 / namespace stac-fastapi-pgstac</text>
+
+  <rect x="60" y="154" width="290" height="146" rx="12" class="box"/>
+  <text x="205" y="190" text-anchor="middle" class="label">Alice requests access</text>
+  <text x="205" y="224" text-anchor="middle" class="body">Holds cluster-admin</text>
+  <text x="205" y="255" text-anchor="middle" class="body">Also holds demo</text>
+  <text x="205" y="284" text-anchor="middle" class="small">Requests only demo</text>
+
+  <path d="M350 226H434" class="line"/>
+  <text x="394" y="203" text-anchor="middle" class="small">Scope</text>
+  <rect x="440" y="154" width="320" height="146" rx="12" fill="#fff2d8" stroke="#d6b875" stroke-width="1.5"/>
+  <text x="600" y="190" text-anchor="middle" class="label">Workspace API</text>
+  <text x="600" y="224" text-anchor="middle" class="body">Check caller + profile</text>
+  <text x="600" y="255" text-anchor="middle" class="body">Use original subject token</text>
+  <text x="600" y="284" text-anchor="middle" class="small">Client secret stays server-side</text>
+
+  <path d="M760 226H844" class="line"/>
+  <text x="804" y="203" text-anchor="middle" class="small">Exchange</text>
+  <rect x="850" y="154" width="290" height="146" rx="12" class="box"/>
+  <text x="995" y="190" text-anchor="middle" class="label">Keycloak</text>
+  <text x="995" y="224" text-anchor="middle" class="body">Apply profile scope</text>
+  <text x="995" y="255" text-anchor="middle" class="body">Block interactive scope</text>
+  <text x="995" y="284" text-anchor="middle" class="small">Issue restricted user token</text>
+
+  <path d="M995 300V348H600V386" class="line"/>
+  <text x="600" y="332" text-anchor="middle" class="small">Workspace API validates the returned claims</text>
+  <rect x="60" y="394" width="1080" height="230" rx="12" fill="#e6f3ed" stroke="#a5caba" stroke-width="1.5"/>
+  <text x="600" y="432" text-anchor="middle" class="label">Returned task token</text>
+  <text x="600" y="470" text-anchor="middle" class="body">Subject: Alice's user ID stays the same</text>
+  <text x="600" y="505" text-anchor="middle" class="body">Audiences: workspace-api + ws-alice</text>
+  <text x="600" y="540" text-anchor="middle" class="body">Roles: ws_api + vcluster_vc0_demo</text>
+  <text x="600" y="578" text-anchor="middle" class="body">Excluded: ws_admin / vcluster_vc0_cluster-admin / other runtime profiles</text>
+  <text x="600" y="608" text-anchor="middle" class="small">Issuer policy: 300 seconds in the saved notebook run</text>
+
+  <path d="M600 624V674" class="line"/>
+  <rect x="330" y="682" width="540" height="82" rx="12" class="box"/>
+  <text x="600" y="717" text-anchor="middle" class="label">Process receives the restricted token</text>
+  <text x="600" y="747" text-anchor="middle" class="small">Alice keeps her original administrator access</text>
+  <text x="600" y="814" text-anchor="middle" class="small">The namespace role limits Kubernetes access; ws_api is a separate service-access permission.</text>
+</svg>

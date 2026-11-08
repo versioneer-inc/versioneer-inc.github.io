@@ -1,5 +1,11 @@
 const POSTS = [
   {
+    key: "2026-11-08-on-your-behalf",
+    date: "2026-11-08",
+    file: "blog/2026-11-08-on-your-behalf.md",
+    fallbackTitle: "Act on Your Behalf: A five-minute token for a STAC export",
+  },
+  {
     key: "2026-09-09-stac-should-explain-data-access-without-guesswork",
     date: "2026-09-09",
     file: "blog/2026-09-09-stac-should-explain-data-access-without-guesswork.md",

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="910" viewBox="0 0 1200 910" role="img" aria-labelledby="title description">
+  <title id="title">Delegated access from a task to workspace services</title>
+  <desc id="description">A caller requests a workspace token through Workspace API and Keycloak. A process uses it to request service credentials or access a selected vCluster namespace. Crossplane prepares workspace identity and connections. Token lifetime follows issuer policy. Service credentials and accepted Jobs have separate lifetimes. Each backend enforces its own permissions.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8" fill="none" stroke="#587281" stroke-width="1.5"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #173042; }
+      .heading { font-size: 30px; font-weight: 700; }
+      .label { font-size: 24px; font-weight: 700; }
+      .body { font-size: 21px; }
+      .small { font-size: 19px; }
+      .line { fill: none; stroke: #587281; stroke-width: 2.5; marker-end: url(#arrow); }
+      .box { fill: #fff; stroke: #b9cdd6; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="1200" height="910" rx="20" fill="#f6f9fb"/>
+  <text x="60" y="66" class="heading">Workspace access for a process</text>
+  <text x="60" y="102" class="body">Scoped runtime roles. Separate service credentials. Token lifetime set by issuer policy.</text>
+
+  <rect x="60" y="142" width="1080" height="80" rx="12" fill="#e6f3ed" stroke="#a5caba"/>
+  <text x="600" y="174" text-anchor="middle" class="label">Datalab declaration + Crossplane composition</text>
+  <text x="600" y="203" text-anchor="middle" class="small">Prepare Keycloak clients, roles, service connections, and runtime profiles</text>
+
+  <rect x="60" y="270" width="270" height="115" rx="12" class="box"/>
+  <text x="195" y="305" text-anchor="middle" class="label">User requests token</text>
+  <text x="195" y="338" text-anchor="middle" class="body">Workspace + profile</text>
+  <text x="195" y="367" text-anchor="middle" class="body">Caller grants checked</text>
+
+  <path d="M330 327H444" class="line"/>
+  <rect x="450" y="270" width="320" height="115" rx="12" fill="#fff2d8" stroke="#d6b875" stroke-width="1.5"/>
+  <text x="610" y="305" text-anchor="middle" class="label">Workspace API + Keycloak</text>
+  <text x="610" y="338" text-anchor="middle" class="body">Check caller + scope</text>
+  <text x="610" y="367" text-anchor="middle" class="body">Issue or exchange token</text>
+
+  <path d="M770 327H864" class="line"/>
+  <text x="818" y="306" text-anchor="middle" class="small">Token</text>
+  <rect x="870" y="270" width="270" height="115" rx="12" class="box"/>
+  <text x="1005" y="311" text-anchor="middle" class="label">Local or cloud process</text>
+  <text x="1005" y="345" text-anchor="middle" class="body">Pipeline, job, or agent</text>
+  <text x="1005" y="372" text-anchor="middle" class="small">No open browser needed</text>
+
+  <path d="M1005 385V438H326V492" class="line"/>
+  <path d="M1005 438H874V492" class="line"/>
+  <text x="600" y="474" text-anchor="middle" class="small">Use the token for permitted access</text>
+
+  <rect x="60" y="500" width="520" height="126" rx="12" class="box"/>
+  <text x="320" y="536" text-anchor="middle" class="label">Request a service connection</text>
+  <text x="320" y="569" text-anchor="middle" class="body">Workspace API checks access</text>
+  <text x="320" y="600" text-anchor="middle" class="body">Returns endpoint + service credentials</text>
+
+  <rect x="620" y="500" width="520" height="126" rx="12" class="box"/>
+  <text x="880" y="536" text-anchor="middle" class="label">Connect to the vCluster API</text>
+  <text x="880" y="569" text-anchor="middle" class="body">Use token + public runtime profile</text>
+  <text x="880" y="600" text-anchor="middle" class="body">Validate identity, audience, and roles</text>
+
+  <path d="M320 626V676" class="line"/>
+  <path d="M880 626V676" class="line"/>
+  <rect x="60" y="684" width="520" height="100" rx="12" fill="#e6f3ed" stroke="#a5caba"/>
+  <text x="320" y="723" text-anchor="middle" class="label">S3 / PostgreSQL / MongoDB</text>
+  <text x="320" y="757" text-anchor="middle" class="body">Storage policies and database grants</text>
+  <rect x="620" y="684" width="520" height="100" rx="12" fill="#e6f3ed" stroke="#a5caba"/>
+  <text x="880" y="723" text-anchor="middle" class="label">Selected runtime namespace</text>
+  <text x="880" y="757" text-anchor="middle" class="body">Kubernetes RBAC controls operations</text>
+
+  <text x="600" y="835" text-anchor="middle" class="body">Token expiry does not stop an accepted Job.</text>
+  <text x="600" y="867" text-anchor="middle" class="small">Schedules and service credentials have their own lifecycle and stop controls.</text>
+</svg>
