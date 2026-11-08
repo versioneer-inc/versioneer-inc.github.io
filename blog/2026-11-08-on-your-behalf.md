@@ -177,7 +177,7 @@ This matters if Alice hands the token to another process: its Kubernetes
 permissions are smaller, but it can still request the service credentials
 that role permits.
 
-Workspace API can act as the Security Token Service (STS) in this design,
+The Workspace can act as the Security Token Service (STS),
 exchanging a workspace token for task credentials based on Provider
 Datalab's declared access settings. For this export, those credentials
 would be limited to the permitted inputs, output location, operations,
